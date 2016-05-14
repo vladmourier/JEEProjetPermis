@@ -28,4 +28,5 @@ public class BaseController extends MultiActionController {
 	{
 		return index(request, response);
 	}
+	
 }
