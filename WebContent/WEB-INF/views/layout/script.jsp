@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<script type="text/javascript" src="lib/jquery/jquery.js"></script>
-<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="lib/mdb/js/mdb.min.js"></script>
-<script type="text/javascript" src="lib/parallax/jquery.parallax.js"></script>
+<script type="text/javascript" src="resources/lib/jquery/jquery.js"></script>
+<script type="text/javascript" src="resources/lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/lib/mdb/js/mdb.min.js"></script>
+<script type="text/javascript" src="resources/lib/parallax/jquery.parallax.js"></script>
+<script type="text/javascript" src="resources/js/footer.js"></script>
