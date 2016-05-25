@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 @Controller
-public class UserController extends MultiActionController {
+public class LearnerController extends MultiActionController {
 
 	
 	@RequestMapping(value="addUser.htm")
