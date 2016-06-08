@@ -1,6 +1,6 @@
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
-	<div class="main-panel">
+	<div class="main-panel card">
 		<div class="main-panel-header">
 			<div class="main-panel-title">Créer un indicateur</div>
 		</div>
@@ -22,7 +22,7 @@
 						</div>
 					</div>
 					<div class="form-submit">
-						<input class="button" type="submit" value="Valider" />
+						<input class="btn btn-primary" type="submit" value="Valider" />
 					</div>
 				</form>
 			</div>

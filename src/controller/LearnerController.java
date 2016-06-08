@@ -13,56 +13,56 @@ import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 public class LearnerController extends MultiActionController {
 
 	
-	@RequestMapping(value="addUser.htm")
-	public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response) throws Exception
+	@RequestMapping(value="addLearner.htm")
+	public ModelAndView addLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 
-		return new ModelAndView("User/add");
+		return new ModelAndView("Learner/add");
 	}
 	
-	@RequestMapping(value="detailsUser.htm")
-	public ModelAndView detailsUser(HttpServletRequest request, HttpServletResponse response) throws Exception
+	@RequestMapping(value="detailsLearner.htm")
+	public ModelAndView detailsLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();
 		//int id = Integer.parseInt(request.getParameter("id"));
-		//request.setAttribute("myUser", aService.detailsUser(id));
-		return new ModelAndView("User/details");
+		//request.setAttribute("myLearner", aService.detailsLearner(id));
+		return new ModelAndView("Learner/details");
 	}
 	
-	@RequestMapping(value="listUser.htm")
-	public ModelAndView listUser(HttpServletRequest request, HttpServletResponse response) throws Exception
+	@RequestMapping(value="listLearner.htm")
+	public ModelAndView listLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();
-		//request.setAttribute("myUsers", aService.listUsers());
-		return new ModelAndView("User/list");
+		//request.setAttribute("myLearners", aService.listLearners());
+		return new ModelAndView("Learner/list");
 	}
 	
-	@RequestMapping(value="removeUser.htm")
-	public ModelAndView removeUser(HttpServletRequest request, HttpServletResponse response) throws Exception
-	{
-		//Service aService = new Service();
-		//int id = Integer.parseInt(request.getParameter("id"));
-		//request.setAttribute("myUser", aService.detailsUser(id));
-		return new ModelAndView("User/remove");
-	}
-	
-	
-	
-	@RequestMapping(value="createUser.htm")
-	public ModelAndView createUser(HttpServletRequest request, HttpServletResponse response) throws Exception
-	{
-		//TODO creation of an User
-		//Service aService = new Service();
-		//aService.createUser(USER_CREATED);
-		return new ModelAndView("User/list");
-	}
-	
-	@RequestMapping(value="deleteUser.htm")
-	public ModelAndView deleteUser(HttpServletRequest request, HttpServletResponse response) throws Exception
+	@RequestMapping(value="removeLearner.htm")
+	public ModelAndView removeLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();
 		//int id = Integer.parseInt(request.getParameter("id"));
-		//aService.deleteUser(id);
-		return new ModelAndView("User/list");
+		//request.setAttribute("myLearner", aService.detailsLearner(id));
+		return new ModelAndView("Learner/remove");
+	}
+	
+	
+	
+	@RequestMapping(value="createLearner.htm")
+	public ModelAndView createLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		//TODO creation of an Learner
+		//Service aService = new Service();
+		//aService.createLearner(Learner_CREATED);
+		return new ModelAndView("Learner/list");
+	}
+	
+	@RequestMapping(value="deleteLearner.htm")
+	public ModelAndView deleteLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		//Service aService = new Service();
+		//int id = Integer.parseInt(request.getParameter("id"));
+		//aService.deleteLearner(id);
+		return new ModelAndView("Learner/list");
 	}
 }

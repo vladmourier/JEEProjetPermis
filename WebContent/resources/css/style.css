@@ -7,10 +7,10 @@
  **********************************************************/
 .btn-customAnimation {
 	-webkit-transition: 0.5s ease;
-        -moz-transition: 0.5s ease;
-         -ms-transition: 0.5s ease;
-          -o-transition: 0.5s ease;
-             transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	-ms-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	transition: 0.5s ease;
 }
 
 .navbar-fixed-top {
@@ -42,7 +42,8 @@
 	margin: 1px;
 }
 
-.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive,
+	.thumbnail a>img, .thumbnail>img {
 	width: 100%;
 }
 
@@ -51,7 +52,8 @@
 	top: 30%;
 	left: 10%;
 	color: #4285F4;
-	text-shadow: -1px -1px 0 #FFF,1px -1px 0 #FFF,-1px 1px 0 #FFF,1px 1px 0 #FFF;
+	text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px
+		0 #FFF;
 	font-weight: bold;
 	font-size: 300%;
 }
@@ -71,7 +73,6 @@
  * * *   * * *   **    *
  **  *** *** *** * * ***
  **********************************************************/
-
 .question {
 	width: 50%;
 	display: block;
@@ -113,7 +114,8 @@
 .questionTitle {
 	margin-top: -1.58em;
 	color: #FFFFFF;
-	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px,
+		#000000 1px -1px;
 	width: 100%;
 	height: 4em;
 	border-top-left-radius: 0.37em;
@@ -136,7 +138,6 @@
 	padding-top: 1em;
 }
 
-
 /***********************************************************
  * * ***  *  **  *** ***
  * * *   * * * * *   * *
@@ -144,9 +145,7 @@
  * * *   * * * * *   ** 
  * * *** * * **  *** * *
  **********************************************************/
- 
- 
- 
+
 /**********************************************************
  **  *** **  * *
  * * * * * * * *
@@ -155,20 +154,17 @@
  **  *** **   *
  **********************************************************/
 body, html {
-    width: 100%;
-    height: 100%;
-    display: block;
-    padding: 0;
-    margin: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding: 0;
+	margin: 0;
 }
 
 body {
 	background: url('../img/back.png');
 	background-size: 100% 100%;
-	
 }
-
-
 
 /***********************************************************
  *** *** *** *** *** ***
@@ -178,13 +174,13 @@ body {
  *   *** ***  *  *** * *
 ***********************************************************/
 footer {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 5%;
-    overflow: hidden;
-    background-color: #4285F4;
+	display: block;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 5%;
+	overflow: hidden;
+	background-color: #4285F4;
 }
 
 footer span {
@@ -198,13 +194,13 @@ footer span i {
 	font-size: 90% !important;
 }
 
-
 /***********************************************************
  CONTAINERS
 ***********************************************************/
 .container {
 	margin-top: 70px;
 }
+
 .main-panel {
 	margin-left: 1%;
 	background-color: white;
@@ -223,18 +219,23 @@ footer span i {
 }
 
 .main-panel-content {
-	
+	margin-top: 8px;
+	padding: 8px;
 }
 
+.table-field {
+	text-align: right;
+	padding-right: 20% !important;
+}
 /***********************************************************
  FORMS
 ***********************************************************/
-input[type="number"]{
+input[type="number"] {
 	text-align: right;
 }
+
 .form {
-	margin-top: 8px;
-	padding: 8px;
+	
 }
 
 .form-field {
@@ -253,7 +254,7 @@ input[type="number"]{
 
 .form-label {
 	width: 30%;
-	padding-top : 12px;
+	padding-top: 12px;
 	margin-right: 5px;
 	padding-top: 12px;
 }

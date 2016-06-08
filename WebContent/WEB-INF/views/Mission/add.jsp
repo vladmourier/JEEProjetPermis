@@ -1,0 +1,32 @@
+<jsp:include page="../layout/beforeContent.jsp"></jsp:include>
+<div class="container">
+	<div class="main-panel card">
+		<div class="main-panel-header">
+			<div class="main-panel-title">Ajouter une mission</div>
+		</div>
+		<div class="main-panel-content">
+			<div class="form">
+				<form action="" method="POST">
+					<div class="form-row">
+						<div class="form-field form-field-left">
+							<div class="form-label">Libellé de la mission :</div>
+							<div class="form-input">
+								<input type="text" name="libmission" />
+							</div>
+						</div>
+						<div class="form-field form-field-right">
+							<div class="form-label">Jeu comprenant la mission:</div>
+							<div class="form-input">
+								<input type="text" name="numjeu" />
+							</div>
+						</div>
+					</div>
+					<div class="form-submit">
+						<input class="btn btn-primary" type="submit" value="Valider" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<jsp:include page="../layout/afterContent.jsp"></jsp:include>
