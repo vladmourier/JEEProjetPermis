@@ -21,6 +21,10 @@
 	background-color: #4285F4;
 }
 
+.navbar-brand img {
+	height: 2em;
+}
+
 .carousel-indicators li {
 	border-radius: 0;
 }
@@ -36,6 +40,10 @@
 
 .carousel .carousel-indicators .active {
 	margin: 1px;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+	width: 100%;
 }
 
 .item h3 {
