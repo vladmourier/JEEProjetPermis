@@ -11,7 +11,7 @@
 						<div class="form-field">
 							<div class="form-label">Libellé de l'objectif :</div>
 							<div class="form-input">
-								<input type="text" name="libobjectif" />
+								<input type="text" name="wording" />
 							</div>
 						</div>
 					</div>

@@ -15,8 +15,12 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#" class="waves-effect waves-light">Link <span class="sr-only">(current)</span></a></li>
-                <li><a href="#" class="waves-effect waves-light">Link</a></li>
+                <li class="active"><a href="listAction.htm" class="waves-effect waves-light">Actions<span class="sr-only">(current)</span></a></li>
+                <li><a href="listLearner.htm" class="waves-effect waves-light">Apprenants</a></li>
+                <li><a href="listGame.htm" class="waves-effect waves-light">Jeux</a></li>
+                <li><a href="listGoals.htm" class="waves-effect waves-light">Objectifs</a></li>
+                <li><a href="listIndicator.htm" class="waves-effect waves-light">Indicateurs</a></li>
+                <li><a href="listMission.htm" class="waves-effect waves-light">Missions</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search">
                 <div class="form-group waves-effect waves-light">

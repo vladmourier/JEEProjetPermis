@@ -198,7 +198,19 @@ footer span i {
  CONTAINERS
 ***********************************************************/
 .container {
-	margin-top: 70px;
+	padding-top: 70px;
+}
+
+.page-title {
+	color: #4285F4;
+	border-bottom: 1px solid lightgray;
+	font-family: inherit;
+}
+
+.list-item {
+	background-color: #4285F4;
+	display: inline-block;
+	margin-right: 10px;
 }
 
 .main-panel {
@@ -226,6 +238,35 @@ footer span i {
 .table-field {
 	text-align: right;
 	padding-right: 20% !important;
+}
+
+.buttons-group {
+	float: right;
+	padding-bottom: 3px;
+}
+
+.buttons-group a {
+	color: white !important;
+}
+
+.card-group {
+	display: inline-table;
+}
+
+.card-group .card-block {
+	overflow: visible !important;
+}
+
+.card-success {
+	background-color: #00C851;
+	padding: 10px;
+}
+
+.card-create-item {
+/* 	width: 50px; */
+/* 	height: 50px; */
+padding: 10px;
+cursor: pointer;
 }
 /***********************************************************
  FORMS

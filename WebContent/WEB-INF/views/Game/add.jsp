@@ -11,7 +11,7 @@
 						<div class="form-field">
 							<div class="form-label">Libellé du jeu :</div>
 							<div class="form-input">
-								<input type="text" name="libjeu" />
+								<input type="text" name="wording" />
 							</div>
 						</div>
 					</div>

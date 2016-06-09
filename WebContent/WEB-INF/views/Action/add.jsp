@@ -11,13 +11,13 @@
 						<div class="form-field form-field-left">
 							<div class="form-label">Libellé de l'action :</div>
 							<div class="form-input">
-								<input type="text" name="libaction" />
+								<input type="text" name="wording" />
 							</div>
 						</div>
 						<div class="form-field form-field-right">
 							<div class="form-label">Score minimum :</div>
 							<div class="form-input">
-								<input type="number" name="scoremin" min="0" />
+								<input type="number" name="scoreminimum" min="0" />
 							</div>
 						</div>
 					</div>
@@ -25,7 +25,7 @@
 						<div class="form-field form-field-left">
 							<div class="form-label">Action suivante :</div>
 							<div class="form-input">
-								<input type="text" name="libaction" />
+								<input type="text" name="fk_action" />
 							</div>
 						</div>
 					</div>
