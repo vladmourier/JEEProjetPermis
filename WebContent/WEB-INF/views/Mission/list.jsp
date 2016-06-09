@@ -1,7 +1,7 @@
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
 	<h1 class="page-title">Liste des Missions</h1>
-	<div class="card-group">
+	<div class="card-group" data-type="Mission">
 		<div class="card card-primary text-xs-center z-depth-2 list-item">
 			<div class="card-block main-panel-content">
 				<p class="white-text">Mission 1</p>

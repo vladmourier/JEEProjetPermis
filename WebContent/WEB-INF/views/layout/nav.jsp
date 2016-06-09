@@ -21,7 +21,7 @@
 					class="waves-effect waves-light">Actions<span class="sr-only">(current)</span></a></li>
 				<li><a href="listLearner.htm" class="waves-effect waves-light">Apprenants</a></li>
 				<li><a href="listGame.htm" class="waves-effect waves-light">Jeux</a></li>
-				<li><a href="listGoals.htm" class="waves-effect waves-light">Objectifs</a></li>
+				<li><a href="listGoal.htm" class="waves-effect waves-light">Objectifs</a></li>
 				<li><a href="listIndicator.htm"
 					class="waves-effect waves-light">Indicateurs</a></li>
 				<li><a href="listMission.htm" class="waves-effect waves-light">Missions</a></li>
