@@ -19,18 +19,17 @@
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img src="resources/img/splashscreen/1.jpg">
-      <h3 data-animation="animated bounceInDown">SECURITE AMELIOREE</h3>
+      <h3 data-animation="animated bounceInDown">ACTIVITE SUR LE TARMAC</h3>
       <span data-animation="animated fadeInLeft">Grâce à de nombreux tests, la plateforme permet d'améliorer la sécurité des aéroports</span>
     </div>
-
     <div class="item">
       <img src="resources/img/splashscreen/2.jpg">
-      <h3 data-animation="animated bounceInDown">SECURITE AMELIOREE</h3>
+      <h3 data-animation="animated bounceInDown">CONSEQUENCES EN VOL</h3>
       <span data-animation="animated fadeInLeft">Grâce à de nombreux tests, la plateforme permet d'améliorer la sécurité des aéroports</span>
     </div>
     <div class="item">
       <img src="resources/img/splashscreen/3.jpg">
-      <h3 data-animation="animated bounceInDown">SECURITE AMELIOREE</h3>
+      <h3 data-animation="animated bounceInDown">TYPES DE VEHICULES</h3>
       <span data-animation="animated fadeInLeft">Grâce à de nombreux tests, la plateforme permet d'améliorer la sécurité des aéroports</span>
     </div>
     <div class="item">
@@ -40,42 +39,42 @@
     </div>
     <div class="item">
       <img src="resources/img/splashscreen/5.jpg">
-      <h3 data-animation="animated bounceInDown">SECURITE AMELIOREE</h3>
+      <h3 data-animation="animated bounceInDown">RISQUES NOCTURNES</h3>
       <span data-animation="animated fadeInLeft">Grâce à de nombreux tests, la plateforme permet d'améliorer la sécurité des aéroports</span>
     </div>
     <div class="item">
       <img src="resources/img/splashscreen/6.jpg">
-      <h3 data-animation="animated bounceInDown">SECURITE AMELIOREE</h3>
+      <h3 data-animation="animated bounceInDown">RiSQUES METEOROLOGIQUES</h3>
       <span data-animation="animated fadeInLeft">Grâce à de nombreux tests, la plateforme permet d'améliorer la sécurité des aéroports</span>
     </div>
     <div class="item">
       <img src="resources/img/splashscreen/7.jpg">
-      <h3 data-animation="animated bounceInDown">SECURITE AMELIOREE</h3>
+      <h3 data-animation="animated bounceInDown">PHASE PUSH-BACK</h3>
       <span data-animation="animated fadeInLeft">Grâce à de nombreux tests, la plateforme permet d'améliorer la sécurité des aéroports</span>
     </div>
     <div class="item">
       <img src="resources/img/splashscreen/8.jpg">
-      <h3 data-animation="animated bounceInDown">SECURITE AMELIOREE</h3>
+      <h3 data-animation="animated bounceInDown">PHASE D'EMBARQUEMENT</h3>
       <span data-animation="animated fadeInLeft">Grâce à de nombreux tests, la plateforme permet d'améliorer la sécurité des aéroports</span>
     </div>
     <div class="item">
       <img src="resources/img/splashscreen/9.jpg">
-      <h3 data-animation="animated bounceInDown">SECURITE AMELIOREE</h3>
+      <h3 data-animation="animated bounceInDown">GESTION DES PASSAGERS</h3>
       <span data-animation="animated fadeInLeft">Grâce à de nombreux tests, la plateforme permet d'améliorer la sécurité des aéroports</span>
     </div>
     <div class="item">
       <img src="resources/img/splashscreen/10.jpg">
-      <h3 data-animation="animated bounceInDown">SECURITE AMELIOREE</h3>
+      <h3 data-animation="animated bounceInDown">SOCIETES EXTERNES</h3>
       <span data-animation="animated fadeInLeft">Grâce à de nombreux tests, la plateforme permet d'améliorer la sécurité des aéroports</span>
     </div>
     <div class="item">
       <img src="resources/img/splashscreen/11.jpg">
-      <h3 data-animation="animated bounceInDown">SECURITE AMELIOREE</h3>
+      <h3 data-animation="animated bounceInDown">VEHICULES FOLLOW-ME</h3>
       <span data-animation="animated fadeInLeft">Grâce à de nombreux tests, la plateforme permet d'améliorer la sécurité des aéroports</span>
     </div>
     <div class="item">
       <img src="resources/img/splashscreen/12.jpg">
-      <h3 data-animation="animated bounceInDown">SECURITE AMELIOREE</h3>
+      <h3 data-animation="animated bounceInDown">DEGIVRAGE</h3>
       <span data-animation="animated fadeInLeft">Grâce à de nombreux tests, la plateforme permet d'améliorer la sécurité des aéroports</span>
     </div>
   </div>

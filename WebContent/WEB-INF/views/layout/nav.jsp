@@ -15,7 +15,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#" class="waves-effect waves-light">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#" class="waves-effect waves-light">Link</a></li>
                 <li><a href="#" class="waves-effect waves-light">Link</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search">

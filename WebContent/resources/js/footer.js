@@ -19,7 +19,7 @@ $("footer").hover(function(){
 }, function(){
     mouseHoverFooter = false;
 });
-
+/*
 $("body").mousemove(function( event ) {
     if(mouseHoverFooter){ return; }
     console.log(event.clientX / $(document).width());
@@ -40,4 +40,4 @@ $("body").mousemove(function( event ) {
         
         $(".divFooter").css("left", "80%");
     }
-});
+});*/
