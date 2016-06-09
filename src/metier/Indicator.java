@@ -18,11 +18,6 @@ public class Indicator implements Serializable {
 	private int id;
 
 	private int weight;
-	
-	private int valueIfCheck=0;
-
-	private int valueIfUnCheck=0;
-	 
 
 	//bi-directional many-to-one association to Action
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -54,22 +49,6 @@ public class Indicator implements Serializable {
 
 	public void setAction(Action action) {
 		this.action = action;
-	}
-	
-	public int getValueIfCheck() {
-		return valueIfCheck;
-	}
-
-	public void setValueIfCheck(int valueIfCheck) {
-		this.valueIfCheck = valueIfCheck;
-	}
-
-	public int getValueIfUnCheck() {
-		return valueIfUnCheck;
-	}
-
-	public void setValueIfUnCheck(int valueIfUnCheck) {
-		this.valueIfUnCheck = valueIfUnCheck;
 	}
 
 }
