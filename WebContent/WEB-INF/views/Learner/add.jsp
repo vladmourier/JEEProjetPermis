@@ -11,13 +11,13 @@
 						<div class="form-field form-field-left">
 							<div class="form-label">Nom de l'apprenant :</div>
 							<div class="form-input">
-								<input type="text" name="nomapprenant" />
+								<input type="text" name="surname" />
 							</div>
 						</div>
 						<div class="form-field form-field-right">
 							<div class="form-label">Prénom de l'apprenant:</div>
 							<div class="form-input">
-								<input type="text" name="prenomapprenant" />
+								<input type="text" name="forname" />
 							</div>
 						</div>
 					</div>

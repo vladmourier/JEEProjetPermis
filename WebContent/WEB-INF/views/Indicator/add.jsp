@@ -11,13 +11,13 @@
 						<div class="form-field form-field-left">
 							<div class="form-label">Libellé de l'action :</div>
 							<div class="form-input">
-								<input type="text" name="numaction" />
+								<input type="text" name="fk_action" />
 							</div>
 						</div>
 						<div class="form-field form-field-right">
 							<div class="form-label">Poids de l'indicateur :</div>
 							<div class="form-input">
-								<input type="number" name="poids" min="0"/>
+								<input type="number" name="weight" min="0"/>
 							</div>
 						</div>
 					</div>

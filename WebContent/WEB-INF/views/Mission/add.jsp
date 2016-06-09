@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
 	<div class="main-panel card">
@@ -11,13 +12,13 @@
 						<div class="form-field form-field-left">
 							<div class="form-label">Libellé de la mission :</div>
 							<div class="form-input">
-								<input type="text" name="libmission" />
+								<input type="text" name="wording" />
 							</div>
 						</div>
 						<div class="form-field form-field-right">
 							<div class="form-label">Jeu comprenant la mission:</div>
 							<div class="form-input">
-								<input type="text" name="numjeu" />
+								<input type="text" name="fk_game" />
 							</div>
 						</div>
 					</div>
