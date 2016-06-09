@@ -173,7 +173,7 @@ body {
  *   * * * *  *  *   ** 
  *   *** ***  *  *** * *
 ***********************************************************/
-footer {
+/*footer {
 	display: block;
 	position: fixed;
 	bottom: 0;
@@ -192,6 +192,55 @@ footer span {
 
 footer span i {
 	font-size: 90% !important;
+}*/
+
+footer {
+	position: fixed !important;
+	bottom: 2em;
+	right: 2em;
+	height: 2em;
+	width: 2em;
+	display: block;
+	border-radius: 1em;
+	color: #4285F4;
+	
+}
+
+.mdl-tooltip, .popover {
+	text-align: left;
+}
+
+.popover {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 6px;
+	
+}
+
+.innerLink {
+	white-space: nowrap;
+}
+
+.popover, .popover-content, .popover-title, .tooltip>.tooltip-inner {
+	background-color: #4285F4;
+}
+
+.popover-content {
+	border: 0;
+}
+
+.popover.top>.arrow:after {
+   border-top-color: #4285F4;
+}
+
+footer a {
+	font-size: 350% !important;
+}
+
+footer .dropdown-toggle {
+	font-size: inherit !important;
+	color: #4285F4;
 }
 
 /***********************************************************
