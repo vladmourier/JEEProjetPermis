@@ -7,7 +7,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Projet</title>
+        <link rel="icon" type="image/png" href="resources/img/favicon.png" />
+		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.png" /><![endif]-->
+        <title>AeroSafety</title>
         <jsp:include page="style.jsp"></jsp:include>
     </head>
     <body>

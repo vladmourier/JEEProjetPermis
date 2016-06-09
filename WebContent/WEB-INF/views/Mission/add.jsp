@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
 	<div class="main-panel card">
