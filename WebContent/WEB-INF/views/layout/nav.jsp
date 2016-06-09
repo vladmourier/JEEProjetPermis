@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand waves-effect waves-light" href="#"><img class="h1em Dblock" src="resources/img/logo.png"/></a>
+            <a class="navbar-brand waves-effect waves-light" href="/"><img class="h1em Dblock" src="resources/img/logo.png"/></a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
