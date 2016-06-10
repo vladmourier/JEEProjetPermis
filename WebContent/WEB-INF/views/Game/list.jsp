@@ -26,7 +26,7 @@
 			</div>
 		</div>
 		<div
-			class="card card-success btn-success card-create-item text-xs-center z-depth-2 list-item">
+			class="card btn-success BG4285F4 card-create-item text-xs-center z-depth-2 list-item">
 			<div class="">
 				<span class="glyphicon glyphicon-plus"></span>
 			</div>

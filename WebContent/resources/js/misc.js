@@ -1,11 +1,11 @@
 $(document).ready(function (){listenToClick()});
 
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip();
+	$('[data-toggle="tooltip"]').tooltip({'container': 'body'});
 })
 
 function listenToClick(){
-$(".card-create-item").click(getForm);
+	$(".card-create-item").click(getForm);
 }
 
 function getForm(){
@@ -20,14 +20,13 @@ function getForm(){
 		error: function(res, status, error){
 			alert(res + "\n" + status + "\n" + error)
 		}
-			
-	})
+	});
 }
 
 function displayContent(HTMLcontent){
 	$(HTMLcontent).find(".main-panel-title").append(
-			$("<span style=\"float:right\"><a class=\"delete glyphicon glyphicon-remove btn btn-danger\"></a></span>")
-			);
+		$("<span style=\"float:right\"><a class=\"delete glyphicon glyphicon-remove btn btn-danger\"></a></span>")
+	);
 	
 	var button = $(".card-create-item");
 	$(".card-create-item").remove();
@@ -36,5 +35,5 @@ function displayContent(HTMLcontent){
 	listenToClick();
 	$(".delete").click(function (){
 		$(HTMLcontent).fadeOut("slow");
-	})
+	});
 }

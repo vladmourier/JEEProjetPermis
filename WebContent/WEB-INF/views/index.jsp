@@ -44,7 +44,7 @@
     </div>
     <div class="item">
       <img src="resources/img/splashscreen/6.jpg">
-      <h3 data-animation="animated bounceInDown">RiSQUES METEOROLOGIQUES</h3>
+      <h3 data-animation="animated bounceInDown">RISQUES METEOROLOGIQUES</h3>
       <span data-animation="animated fadeInLeft">La neige, la pluie, le verglas... Autant de phénomènes métérologiques risqués qui n'arrêtent pas l'activité d'un aéroport.</span>
     </div>
     <div class="item">
