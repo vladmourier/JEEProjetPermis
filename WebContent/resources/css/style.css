@@ -195,7 +195,6 @@ footer {
 	display: block;
 	border-radius: 1em;
 	color: #4285F4;
-	
 }
 
 .mdl-tooltip, .popover {
@@ -207,7 +206,6 @@ footer {
 	border-top-right-radius: 0px;
 	border-bottom-right-radius: 0px;
 	border-bottom-left-radius: 6px;
-	
 }
 
 .innerLink {
@@ -223,7 +221,7 @@ footer {
 }
 
 .popover.top>.arrow:after {
-   border-top-color: #4285F4;
+	border-top-color: #4285F4;
 }
 
 footer a {
@@ -316,10 +314,10 @@ footer .dropdown-toggle {
 }
 
 .card-create-item {
-/* 	width: 50px; */
-/* 	height: 50px; */
-padding: 10px;
-cursor: pointer;
+	/* 	width: 50px; */
+	/* 	height: 50px; */
+	padding: 10px;
+	cursor: pointer;
 }
 /***********************************************************
  *** *** *** * * * ***
