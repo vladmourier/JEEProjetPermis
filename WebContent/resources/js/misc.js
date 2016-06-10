@@ -57,3 +57,21 @@ function displayContent(HTMLcontent) {
 		$(HTMLcontent).fadeOut("slow");
 	});
 }
+
+$(".container").click(function(){
+	console.log("a");
+	if($("#searchIcon").find("i").hasClass("fa-times")) {
+		$("#searchInput").removeClass("inputWidth5em").addClass("inputWidth0");
+		$("#searchIcon").find("i").removeClass("fa-times").addClass("fa-search");
+	}
+});
+
+$("#searchIcon").click(function(){
+	if($(this).find("i").hasClass("fa-search")) {
+		$("#searchInput").removeClass("inputWidth0").addClass("inputWidth5em");
+		$(this).find("i").removeClass("fa-search").addClass("fa-times");
+	} else {
+		$("#searchInput").removeClass("inputWidth5em").addClass("inputWidth0");
+		$(this).find("i").removeClass("fa-times").addClass("fa-search");
+	}
+});

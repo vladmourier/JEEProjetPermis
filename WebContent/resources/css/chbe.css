@@ -14,6 +14,9 @@ No use permitted outside of the CHBE website (chbe.fr), its sub-domains or for t
 .Color000000 {color: #000000;}
 .ColorFFFFFF {color: #FFFFFF;}
 
+.WhiteLink, .WhiteLink:focus, .WhiteLink:active, .WhiteLink:hover, .WhiteLink:visited {color: #FFFFFF !important;}
+.BlackLink, .BlackLink:focus, .BlackLink:active, .BlackLink:hover, .BlackLink:visited {color: #000000 !important;}
+
 .BorderBlack1px {border: 1px solid #000000};
 
 .OutlineNone {outline: 0;} /* NOT ACCESSIBLE /!\ */
@@ -224,6 +227,7 @@ No use permitted outside of the CHBE website (chbe.fr), its sub-domains or for t
 .ListStyleTypeNone {list-style-type: none;}
 
 /* SIZES */
+.colx-0 {width: 0%;}
 .colx-1 {width: 1%;}
 .colx-2 {width: 2%;}
 .colx-3 {width: 3%;}
@@ -324,7 +328,9 @@ No use permitted outside of the CHBE website (chbe.fr), its sub-domains or for t
 .colx-98 {width: 98%;}
 .colx-99 {width: 99%;}
 .colx-100 {width: 100%;}
+.colx-auto {width: auto;}
 
+.coly-0 {height: 0%;}
 .coly-1 {height: 1%;}
 .coly-2 {height: 2%;}
 .coly-3 {height: 3%;}
@@ -425,3 +431,4 @@ No use permitted outside of the CHBE website (chbe.fr), its sub-domains or for t
 .coly-98 {height: 98%;}
 .coly-99 {height: 99%;}
 .coly-100 {height: 100%;}
+.coly-auto{height: auto;}
