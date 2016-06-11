@@ -9,5 +9,5 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poiret+One'>
 
-<link rel="stylesheet" href="resources/css/chbe.css"/>
-<link rel="stylesheet" href="resources/css/style.css"/>
+<link rel="stylesheet" media="screen" href="resources/css/chbe.css"/>
+<link rel="stylesheet" media="screen" href="resources/css/style.css"/>

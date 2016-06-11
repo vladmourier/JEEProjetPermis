@@ -10,6 +10,10 @@
 	width: 0 !important;
 }
 
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+	background-color: #4285F4;
+}
+
 .inputWidth5em {
 	width: 5em !important;
 }
@@ -30,6 +34,27 @@
 .BGCustom, .BGCustom:focus, .BGCustom:active, .BGCustom:hover, .BGCustom:visited
 .BG4285F4, .BG4285F4:focus, .BG4285F4:active, .BG4285F4:hover, .BG4285F4:visited {
 	background-color: #4285F4 !important;
+}
+
+
+/***********************************************************
+ * * * *** **  ***  *     *** * * *** *** *** *** ***
+ ** ** *   * *  *  * *    * * * * *   * *  *  *   *
+ *   * **  * *  *  ***    * * * * **  **   *  **  *** MEDIA QUERIES
+ *   * *   * *  *  * *    **  * * *   * *  *  *     *
+ *   * *** **  *** * *     ** *** *** * * *** *** ***
+ **********************************************************/
+ 
+@media screen and (max-width: 1200px) {
+	.card-group .card-primary {
+		width: calc(33.333% - 10px) !important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.card-group .card-primary {
+		width: calc(100% - 10px) !important;
+	}
 }
 
 /***********************************************************
