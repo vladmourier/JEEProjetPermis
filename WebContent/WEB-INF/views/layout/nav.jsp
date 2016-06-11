@@ -30,9 +30,9 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown hoverable">
-                    <a href="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i> Se connecter <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i> Invité <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        
+                        <li class="hoverable"><a href="login.htm" class="waves-effect waves-light"><i class="fa fa-key"></i> Connexion</a></li>
                     </ul>
                 </li>
                 <li class="dropdown hoverable">
