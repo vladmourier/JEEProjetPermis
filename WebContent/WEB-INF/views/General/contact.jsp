@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
-	<h1>Connexion au service</h1>
+	<h1>Contact</h1>
 	
 	
 </div>
