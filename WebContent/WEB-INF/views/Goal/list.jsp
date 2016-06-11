@@ -1,6 +1,6 @@
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
-	<h1 class="page-title">Liste des Objectifs</h1>
+	<h1 class="page-title">Liste des objectifs</h1>
 	<div class="card-group" data-type="Goal">
 		<div class="card card-primary text-xs-center z-depth-2 list-item">
 			<div class="card-block main-panel-content">
