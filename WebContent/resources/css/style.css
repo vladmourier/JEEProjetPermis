@@ -9,7 +9,8 @@
 	width: 0 !important;
 }
 
-.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover
+	{
 	background-color: #4285F4;
 }
 
@@ -36,7 +37,6 @@
 	background-color: #4285F4 !important;
 }
 
-
 /***********************************************************
  * * * *** **  ***  *     *** * * *** *** *** *** ***
  ** ** *   * *  *  * *    * * * * *   * *  *  *   *
@@ -44,10 +44,21 @@
  *   * *   * *  *  * *    **  * * *   * *  *  *     *
  *   * *** **  *** * *     ** *** *** * * *** *** ***
  **********************************************************/
- 
+@media screen and (min-width: 1200px) {
+	.form-field-left {
+		min-width: 50%;
+	}
+}
+
 @media screen and (max-width: 1200px) {
 	.card-group .card-primary {
 		width: calc(33.333% - 10px) !important;
+	}
+	.form-field {
+		min-width: 100%;
+	}
+	.form-field-left {
+		border-right: none !important;
 	}
 }
 
@@ -295,8 +306,9 @@ footer .dropdown-toggle {
 }
 
 .card-group .card-primary {
- 	width: calc(16.666% - 10px);
+	width: calc(16.666% - 10px);
 }
+
 .main-panel {
 	margin-left: 5px;
 	margin-right: 5px;
@@ -367,7 +379,6 @@ input[type="number"] {
 
 .form-field {
 	display: inline-flex;
-	min-width: 50%;
 }
 
 .form-field-left {
