@@ -24,10 +24,36 @@ public class BaseController extends MultiActionController {
 		return index(request, response);
 	}
 	
+	@RequestMapping(value="register.htm")
+	public ModelAndView register(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		return new ModelAndView("General/register");
+	}
+	
 	@RequestMapping(value="login.htm")
 	public ModelAndView login(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		return new ModelAndView("General/login");
+	}
+	
+	@RequestMapping(value="contact.htm")
+	public ModelAndView contact(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		return new ModelAndView("General/contact");
+	}
+	
+	@RequestMapping(value="infos.htm")
+	public ModelAndView infos(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		return new ModelAndView("General/infos");
+	}
+	
+	@RequestMapping(value="search.htm")
+	public ModelAndView search(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		
+		
+		return new ModelAndView("General/search");
 	}
 	
 }
