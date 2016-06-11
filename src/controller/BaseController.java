@@ -51,7 +51,79 @@ public class BaseController extends MultiActionController {
 	@RequestMapping(value="search.htm")
 	public ModelAndView search(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
+		String search = request.getParameter("search").toLowerCase();
+		String htmlResult = "";
 		
+		if(search.contains("apprenant"))
+		{
+			if(search.contains("liste"))
+			{
+				return new ModelAndView("redirect:listLearner.htm");
+			}
+			else
+			{
+				//learnerService.findAll();
+			}
+		}
+		else if(search.contains("action"))
+		{
+			if(search.contains("liste"))
+			{
+				return new ModelAndView("redirect:listAction.htm");
+			}
+			else
+			{
+				
+			}
+		}
+		else if(search.contains("jeu"))
+		{
+			if(search.contains("liste"))
+			{
+				return new ModelAndView("redirect:listGame.htm");
+			}
+			else
+			{
+				
+			}
+		}
+		else if(search.contains("objectif"))
+		{
+			if(search.contains("liste"))
+			{
+				return new ModelAndView("redirect:listGoal.htm");
+			}
+			else
+			{
+				
+			}
+		}
+		else if(search.contains("indicateur"))
+		{
+			if(search.contains("liste"))
+			{
+				return new ModelAndView("redirect:listIndicator.htm");
+			}
+			else
+			{
+				
+			}
+		}
+		else if(search.contains("mission"))
+		{
+			if(search.contains("liste"))
+			{
+				return new ModelAndView("redirect:listMission.htm");
+			}
+			else
+			{
+				
+			}
+		}
+		else
+		{
+			
+		}
 		
 		return new ModelAndView("General/search");
 	}
