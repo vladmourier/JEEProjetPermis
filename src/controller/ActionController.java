@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 import dao.ActionService;
+import metier.Action;
 
 @Controller
 public class ActionController extends MultiActionController {
@@ -44,8 +45,8 @@ public class ActionController extends MultiActionController {
 	@RequestMapping(value="listAction.htm")
 	public ModelAndView listAction(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		ActionService aService = new ActionService();
-		request.setAttribute("actions", aService.findAll());
+		ActionService service = new ActionService();
+		request.setAttribute("actions", service.findAll());
 		return new ModelAndView("Action/list");
 	}
 	
