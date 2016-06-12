@@ -20,6 +20,15 @@ public class LearnerController extends MultiActionController {
 		return new ModelAndView("Learner/add");
 	}
 	
+	@RequestMapping(value="addValidateLearner.htm")
+	public ModelAndView createLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		//TODO creation of an Learner
+		//Service aService = new Service();
+		//aService.createLearner(Learner_CREATED);
+		return new ModelAndView("Learner/list");
+	}
+	
 	@RequestMapping(value="detailsLearner.htm")
 	public ModelAndView detailsLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
@@ -37,7 +46,7 @@ public class LearnerController extends MultiActionController {
 		return new ModelAndView("Learner/list");
 	}
 	
-	@RequestMapping(value="removeLearner.htm")
+	@RequestMapping(value="deleteeLearner.htm")
 	public ModelAndView removeLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();
@@ -46,18 +55,7 @@ public class LearnerController extends MultiActionController {
 		return new ModelAndView("Learner/remove");
 	}
 	
-	
-	
-	@RequestMapping(value="createLearner.htm")
-	public ModelAndView createLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
-	{
-		//TODO creation of an Learner
-		//Service aService = new Service();
-		//aService.createLearner(Learner_CREATED);
-		return new ModelAndView("Learner/list");
-	}
-	
-	@RequestMapping(value="deleteLearner.htm")
+	@RequestMapping(value="deleteValidateLearner.htm")
 	public ModelAndView deleteLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();

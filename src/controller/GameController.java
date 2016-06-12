@@ -21,6 +21,15 @@ public class GameController extends MultiActionController {
 		return new ModelAndView("Game/add");
 	}
 	
+	@RequestMapping(value="addValidateGame.htm")
+	public ModelAndView createGame(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		//TODO creation of a Game 
+		//Service aService = new Service();
+		//aService.createGame(GAME_CREATED);
+		return new ModelAndView("Game/list");
+	}
+	
 	@RequestMapping(value="detailsGame.htm")
 	public ModelAndView detailsGame(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
@@ -38,26 +47,16 @@ public class GameController extends MultiActionController {
 		return new ModelAndView("Game/list");
 	}
 	
-	@RequestMapping(value="removeGame.htm")
+	@RequestMapping(value="deleteGame.htm")
 	public ModelAndView removeGame(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();
 		//int id = Integer.parseInt(request.getParameter("id"));
 		//request.setAttribute("myGame", aService.detailsGame(id));
 		return new ModelAndView("Game/remove");
-	}
+	}	
 	
-	
-	@RequestMapping(value="createGame.htm")
-	public ModelAndView createGame(HttpServletRequest request, HttpServletResponse response) throws Exception
-	{
-		//TODO creation of a Game 
-		//Service aService = new Service();
-		//aService.createGame(GAME_CREATED);
-		return new ModelAndView("Game/list");
-	}
-	
-	@RequestMapping(value="deleteGame.htm")
+	@RequestMapping(value="deleteValidateGame.htm")
 	public ModelAndView deleteGame(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();
