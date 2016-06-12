@@ -21,6 +21,15 @@ public class GoalController extends MultiActionController {
 		return new ModelAndView("Goal/add");
 	}
 	
+	@RequestMapping(value="addValidateGoal.htm")
+	public ModelAndView createGoal(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		//TODO creation of a Goal
+		//Service aService = new Service();
+		//aService.createGoal(GOAL_CREATED);
+		return new ModelAndView("Goal/list");
+	}
+	
 	@RequestMapping(value="detailsGoal.htm")
 	public ModelAndView detailsGoal(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
@@ -38,7 +47,7 @@ public class GoalController extends MultiActionController {
 		return new ModelAndView("Goal/list");
 	}
 	
-	@RequestMapping(value="removeGoal.htm")
+	@RequestMapping(value="deleteGoal.htm")
 	public ModelAndView removeGoal(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();
@@ -47,17 +56,7 @@ public class GoalController extends MultiActionController {
 		return new ModelAndView("Goal/remove");
 	}
 	
-	
-	@RequestMapping(value="createGoal.htm")
-	public ModelAndView createGoal(HttpServletRequest request, HttpServletResponse response) throws Exception
-	{
-		//TODO creation of a Goal
-		//Service aService = new Service();
-		//aService.createGoal(GOAL_CREATED);
-		return new ModelAndView("Goal/list");
-	}
-	
-	@RequestMapping(value="deleteGoal.htm")
+	@RequestMapping(value="deleteValidateGoal.htm")
 	public ModelAndView deleteGoal(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();

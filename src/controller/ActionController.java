@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
+import dao.ActionService;
+import metier.Action;
+
 @Controller
 public class ActionController extends MultiActionController {
 
@@ -18,27 +21,36 @@ public class ActionController extends MultiActionController {
 	@RequestMapping(value="addAction.htm")
 	public ModelAndView addAction(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-			return new ModelAndView("Action/add");
+		return new ModelAndView("Action/add");
+	}
+	
+	@RequestMapping(value="addValidateAction.htm")
+	public ModelAndView createAction(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		//TODO creation of an Action 
+		//Service aService = new Service();
+		//aService.createAction(ACTION_CREATED);
+		return new ModelAndView("Action/list");
 	}
 	
 	@RequestMapping(value="detailsAction.htm")
 	public ModelAndView detailsAction(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//int id = Integer.parseInt(request.getParameter("id"));
-		//request.setAttribute("myAction", aService.detailsAction(id));
+		ActionService aService = new ActionService();
+		int id = Integer.parseInt(request.getParameter("id"));
+		request.setAttribute("action", aService.find(id));
 		return new ModelAndView("Action/details");
 	}
 	
 	@RequestMapping(value="listAction.htm")
 	public ModelAndView listAction(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//request.setAttribute("myActions", aService.consultListActions());
+		ActionService service = new ActionService();
+		request.setAttribute("actions", service.findAll());
 		return new ModelAndView("Action/list");
 	}
 	
-	@RequestMapping(value="removeAction.htm")
+	@RequestMapping(value="deleteAction.htm")
 	public ModelAndView removeAction(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();
@@ -48,16 +60,7 @@ public class ActionController extends MultiActionController {
 	}
 	
 	
-	@RequestMapping(value="createAction.htm")
-	public ModelAndView createAction(HttpServletRequest request, HttpServletResponse response) throws Exception
-	{
-		//TODO creation of an Action 
-		//Service aService = new Service();
-		//aService.createAction(ACTION_CREATED);
-		return new ModelAndView("Action/list");
-	}
-	
-	@RequestMapping(value="deleteAction.htm")
+	@RequestMapping(value="deleteValidateAction.htm")
 	public ModelAndView deleteAction(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();

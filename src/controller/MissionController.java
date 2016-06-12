@@ -21,6 +21,15 @@ public class MissionController extends MultiActionController {
 		return new ModelAndView("Mission/add");
 	}
 	
+	@RequestMapping(value="addValidateMission.htm")
+	public ModelAndView createMission(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		//TODO creation of a Mission
+		//Service aService = new Service();
+		//aService.createMission(MISSION_CREATED);
+		return new ModelAndView("Mission/list");
+	}
+	
 	@RequestMapping(value="detailsMission.htm")
 	public ModelAndView detailsMission(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
@@ -38,7 +47,7 @@ public class MissionController extends MultiActionController {
 		return new ModelAndView("Mission/list");
 	}
 	
-	@RequestMapping(value="removeMission.htm")
+	@RequestMapping(value="deleteMission.htm")
 	public ModelAndView removeMission(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();
@@ -47,18 +56,7 @@ public class MissionController extends MultiActionController {
 		return new ModelAndView("Mission/remove");
 	}
 
-	
-	
-	@RequestMapping(value="createMission.htm")
-	public ModelAndView createMission(HttpServletRequest request, HttpServletResponse response) throws Exception
-	{
-		//TODO creation of a Mission
-		//Service aService = new Service();
-		//aService.createMission(MISSION_CREATED);
-		return new ModelAndView("Mission/list");
-	}
-	
-	@RequestMapping(value="deleteMission.htm")
+	@RequestMapping(value="deleteValidateMission.htm")
 	public ModelAndView deleteMission(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();

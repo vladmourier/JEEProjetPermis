@@ -50,12 +50,14 @@ public class ActionService extends EntityService {
 		{
 			EntityTransaction transaction = startTransaction();
 			transaction.begin();
-			actions=(List<Action>) entityManager.createQuery("SELECT a FROM action a ORDER By a.id").getResultList();
+			actions= (List<Action>) entityManager.createQuery("SELECT a FROM Action a ORDER BY a.id").getResultList();
 			entityManager.close();
 		} catch (Exception e)
 		{
-			
+			System.out.println(e.getMessage());
 		}
+		
+		
 		return actions;
 	}
 }
