@@ -30,4 +30,10 @@ public class BaseController extends MultiActionController {
 		return new ModelAndView("General/login");
 	}
 	
+	@RequestMapping(value="error.htm")
+	public ModelAndView error(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		return new ModelAndView("General/error");
+	}
+	
 }
