@@ -12,7 +12,7 @@
 					<p class="white-text">${action.wording}</p>
 					<span class="buttons-group">
 						<span class="btn btn-default">
-							<a class="glyphicon glyphicon-edit"></a>
+							<a class="glyphicon glyphicon-edit" href="detailsAction.htm?id=${action.id}"></a>
 						</span>
 						<span class="btn btn-warning">
 							<a class="glyphicon glyphicon-remove"></a>
