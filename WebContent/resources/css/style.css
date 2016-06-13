@@ -5,17 +5,11 @@
  *   * *   *  *  * * * *
  *** *** ***  *  *** * *
 **********************************************************/
-.inputWidth0 {
-	width: 0 !important;
-}
+
 
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover
 	{
 	background-color: #4285F4;
-}
-
-.inputWidth5em {
-	width: 10em !important;
 }
 
 #searchIcon {
@@ -379,6 +373,19 @@ input[type="number"] {
 
 .form-field {
 	display: inline-flex;
+}
+
+
+.inputWidth0 {
+	width: 0 !important;
+}
+
+.inputWidth5em {
+	width: 10em !important;
+}
+
+textarea {
+	resize: vertical;
 }
 
 .form-field-left {
