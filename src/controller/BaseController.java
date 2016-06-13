@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
+import metier.SendEmail;
+
 @Controller
 public class BaseController extends MultiActionController {
 
@@ -39,6 +41,20 @@ public class BaseController extends MultiActionController {
 	@RequestMapping(value="contact.htm")
 	public ModelAndView contact(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
+		return new ModelAndView("General/contact");
+	}
+	
+	@RequestMapping(value="contactValidate.htm")
+	public ModelAndView contactValidate(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{		
+		try {
+			SendEmail.sendMail("FROM "+request.getParameter("name")+" ( "+request.getParameter("mail")+" ) : "+request.getParameter("content"), "contact.aerosafety@gmail.com");
+			
+			SendEmail.sendMail("Votre message : \n\n "+request.getParameter("content")+"\n\n a été transféré avec succès, vous recevrez une réponse sous 48h.", request.getParameter("mail"));
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
 		return new ModelAndView("General/contact");
 	}
 	
