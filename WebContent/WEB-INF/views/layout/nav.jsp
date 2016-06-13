@@ -43,9 +43,9 @@
                     </ul>
                 </li>
 				<li class="hoverable">
-					<form class="navbar-form" role="search">
+					<form class="navbar-form" role="search" method="GET" action="search.htm">
 						<div class="form-group white-text">
-							<input id="searchInput" type="text" class="form-control inputWidth0 customTransition" placeholder="Search">
+							<input id="searchInput" type="text" name="search" class="form-control inputWidth0 customTransition" placeholder="Search">
 							<a id="searchIcon" class="DiBlock WhiteLink"><i class="fa fa-search CursorPointer" aria-hidden="true"></i></a>
 						</div>
 					</form>

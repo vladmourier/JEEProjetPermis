@@ -46,19 +46,13 @@
 
 @media screen and (max-width: 1200px) {
 	.card-group .card-primary {
-		width: calc(33.333% - 10px) !important;
+		width: calc(100% - 10px) !important;
 	}
 	.form-field {
 		min-width: 100%;
 	}
 	.form-field-left {
 		border-right: none !important;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.card-group .card-primary {
-		width: calc(100% - 10px) !important;
 	}
 }
 
@@ -300,7 +294,7 @@ footer .dropdown-toggle {
 }
 
 .card-group .card-primary {
-	width: calc(16.666% - 10px);
+	width: calc(33.33% - 10px);
 }
 
 .main-panel {

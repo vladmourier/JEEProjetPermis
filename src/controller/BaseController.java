@@ -68,11 +68,10 @@ public class BaseController extends MultiActionController {
 	public ModelAndView search(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		String search = request.getParameter("search").toLowerCase();
-		String htmlResult = "";
 		
 		if(search.contains("apprenant"))
 		{
-			if(search.contains("liste"))
+			if(search.contains("list"))
 			{
 				return new ModelAndView("redirect:listLearner.htm");
 			}
@@ -83,7 +82,7 @@ public class BaseController extends MultiActionController {
 		}
 		else if(search.contains("action"))
 		{
-			if(search.contains("liste"))
+			if(search.contains("list"))
 			{
 				return new ModelAndView("redirect:listAction.htm");
 			}
@@ -92,9 +91,9 @@ public class BaseController extends MultiActionController {
 				
 			}
 		}
-		else if(search.contains("jeu"))
+		else if(search.contains("jeu") || search.contains("game"))
 		{
-			if(search.contains("liste"))
+			if(search.contains("list"))
 			{
 				return new ModelAndView("redirect:listGame.htm");
 			}
@@ -103,9 +102,9 @@ public class BaseController extends MultiActionController {
 				
 			}
 		}
-		else if(search.contains("objectif"))
+		else if(search.contains("objectif") || search.contains("goal"))
 		{
-			if(search.contains("liste"))
+			if(search.contains("list"))
 			{
 				return new ModelAndView("redirect:listGoal.htm");
 			}
@@ -114,9 +113,9 @@ public class BaseController extends MultiActionController {
 				
 			}
 		}
-		else if(search.contains("indicateur"))
+		else if(search.contains("indicateur") || search.contains("indicator"))
 		{
-			if(search.contains("liste"))
+			if(search.contains("list"))
 			{
 				return new ModelAndView("redirect:listIndicator.htm");
 			}
@@ -127,7 +126,7 @@ public class BaseController extends MultiActionController {
 		}
 		else if(search.contains("mission"))
 		{
-			if(search.contains("liste"))
+			if(search.contains("list"))
 			{
 				return new ModelAndView("redirect:listMission.htm");
 			}
