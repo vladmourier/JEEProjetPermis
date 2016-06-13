@@ -39,7 +39,7 @@
                     <a href="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info" aria-hidden="true"></i></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="hoverable"><a href="#" class="waves-effect waves-light"><i class="fa fa-info"></i> Informations</a></li>
-                        <li class="hoverable"><a href="#" class="waves-effect waves-light"><i class="fa fa-envelope"></i> Contact</a></li>
+                        <li class="hoverable"><a href="contact.htm" class="waves-effect waves-light"><i class="fa fa-envelope"></i> Contact</a></li>
                     </ul>
                 </li>
 				<li class="hoverable">

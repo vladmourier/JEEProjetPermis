@@ -386,6 +386,20 @@ input[type="number"] {
 
 textarea {
 	resize: vertical;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	border-bottom: 1px solid #9e9e9e;
+	box-shadow: none;
+	outline: none;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	transition: all .3s;
+}
+
+textarea:focus {
+    border-bottom: 1px solid #4285F4;
+    box-shadow: 0 1px 0 0 #4285F4;
 }
 
 .form-field-left {
