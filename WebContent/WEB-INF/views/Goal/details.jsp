@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
 	<div class="main-panel card">
@@ -8,11 +10,11 @@
 			<table class="table table-responsive table-hover">
 				<tr>
 					<td class="table-field">ID de l'objectif</td>
-					<td>${goal.id }</td>
+					<td>${goal.id}</td>
 				</tr>
 				<tr>
 					<td class="table-field">Libellé de l'objectif</td>
-					<td>${goal.wording }</td>	
+					<td>${goal.wording}</td>	
 				</tr>
 			</table>
 			<div class="col-xs-12 Tcenter">
