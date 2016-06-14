@@ -16,6 +16,7 @@
 				</tr>
 				<tr>
 					<td class="table-field">Score minimum</td>
+					
 					<td>${action.scoreMinimum }</td>
 				</tr>
 				<tr>
