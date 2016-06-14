@@ -1,5 +1,8 @@
 package controller;
 
+import java.util.List;
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -9,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
+import metier.Action;
 import metier.SendEmail;
+import dao.ActionService;
 
 @Controller
 public class BaseController extends MultiActionController {
@@ -69,6 +74,8 @@ public class BaseController extends MultiActionController {
 	{
 		String search = request.getParameter("search").toLowerCase();
 		
+		List<String[]> result = new ArrayList();
+		
 		if(search.contains("apprenant"))
 		{
 			if(search.contains("list"))
@@ -88,7 +95,17 @@ public class BaseController extends MultiActionController {
 			}
 			else
 			{
-				
+				String searchAction = search.replace("actions", "");
+				searchAction = searchAction.replace("action", "");
+				ActionService aService = new ActionService();
+				List<Action> acts = aService.search(searchAction.trim());
+				for(int i=0; i<acts.size(); i++)
+				{
+					String [] temp = new String[2];
+					temp[0]="detailsAction.htm?id="+acts.get(i).getId();
+					temp[1]=acts.get(i).getWording();
+					result.add(temp);
+				}
 			}
 		}
 		else if(search.contains("jeu") || search.contains("game"))
@@ -137,8 +154,14 @@ public class BaseController extends MultiActionController {
 		}
 		else
 		{
-			
+			String [] temp = new String[2];
+			temp[0]="#";
+			temp[1]="Pas de résultats";
+			result.add(temp);
 		}
+		
+		request.setAttribute("result", result);
+		request.setAttribute("search", search);
 		
 		return new ModelAndView("General/search");
 	}
