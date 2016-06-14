@@ -15,7 +15,7 @@
 							<a class="glyphicon glyphicon-edit" href="detailsAction.htm?id=${action.id}"></a>
 						</span>
 						<span class="btn btn-warning">
-							<a class="glyphicon glyphicon-remove"></a>
+							<a class="glyphicon glyphicon-remove" href="deleteAction.htm?id=${action.id}"></a>
 						</span>
 					</span>
 				</div>

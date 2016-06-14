@@ -8,7 +8,7 @@
 		</div>
 		<div class="main-panel-content">
 			<div class="form">
-				<form action="createAction.htm" method="POST">
+				<form action="addValidateAction.htm" method="POST">
 					<div class="form-row">
 						<div class="form-field form-field-left">
 							<div class="form-label">Libellé de l'action :</div>

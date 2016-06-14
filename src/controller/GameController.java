@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
+import dao.ActionService;
+import dao.GameService;
+import metier.Game;
+
 @Controller
 public class GameController extends MultiActionController {
 
@@ -24,26 +28,30 @@ public class GameController extends MultiActionController {
 	@RequestMapping(value="addValidateGame.htm")
 	public ModelAndView createGame(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//TODO creation of a Game 
-		//Service aService = new Service();
-		//aService.createGame(GAME_CREATED);
+		Game gam=new Game();
+		gam.setWording(request.getParameter("wording"));
+		
+		GameService aService = new GameService();
+		aService.insertGame(gam);
+		
+		listGame(request,response);
 		return new ModelAndView("Game/list");
 	}
 	
 	@RequestMapping(value="detailsGame.htm")
 	public ModelAndView detailsGame(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//int id = Integer.parseInt(request.getParameter("id"));
-		//request.setAttribute("myGame", aService.detailsGame(id));
+		int id = Integer.parseInt(request.getParameter("id"));
+		GameService aService = new GameService();
+		request.setAttribute("game", aService.find(id));
 		return new ModelAndView("Game/details");
 	}
 	
 	@RequestMapping(value="listGame.htm")
 	public ModelAndView listGame(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//request.setAttribute("myGames", aService.listGames());
+		GameService aService = new GameService();
+		request.setAttribute("games", aService.findAll());
 		return new ModelAndView("Game/list");
 	}
 	

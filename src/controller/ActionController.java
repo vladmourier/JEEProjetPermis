@@ -18,6 +18,33 @@ public class ActionController extends MultiActionController {
 	//TODO Adapt these functions to the Service class
 	//TODO Manage errors (error page? Flashbag?)
 	
+	@RequestMapping(value="addAction.htm")
+	public ModelAndView addAction(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+			ActionService aService = new ActionService();
+			request.setAttribute("actions", aService.findAll());
+			return new ModelAndView("Action/add");
+	}
+		
+	@RequestMapping(value="addValidateAction.htm")
+	public ModelAndView createAction(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		Action act=new Action();
+		act.setWording(request.getParameter("wording"));
+		act.setScoreMinimum(Integer.parseInt(request.getParameter("scoreminimum")));
+	
+		Action act2=new Action(); 
+		act2.setId(Integer.parseInt(request.getParameter("fk_action")));
+		act.setAction(act2);
+		
+		ActionService aService = new ActionService();
+		aService.insertAction(act);
+		
+		listAction(request,response);
+		return new ModelAndView("Action/list");
+	}
+	
+	
 	@RequestMapping(value="detailsAction.htm")
 	public ModelAndView detailsAction(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
@@ -38,32 +65,9 @@ public class ActionController extends MultiActionController {
 		return new ModelAndView("Action/list");
 	}
 	
-		@RequestMapping(value="addAction.htm")
-	public ModelAndView addAction(HttpServletRequest request, HttpServletResponse response) throws Exception
-	{
-			ActionService aService = new ActionService();
-			request.setAttribute("actions", aService.findAll());
-			return new ModelAndView("Action/add");
-	}
-		
-	@RequestMapping(value="createAction.htm")
-	public ModelAndView createAction(HttpServletRequest request, HttpServletResponse response) throws Exception
-	{
-		Action act=new Action();
-		act.setWording(request.getParameter("wording"));
-		act.setScoreMinimum(Integer.parseInt(request.getParameter("scoreminimum")));
 
-		Action act2=new Action(); 
-		act2.setId(Integer.parseInt(request.getParameter("fk_action")));
-		act.setAction(act2);
-		
-		ActionService aService = new ActionService();
-		aService.insertAction(act);
-		
-		listAction(request,response);
-		return new ModelAndView("Action/list");
-	}
-		@RequestMapping(value="removeAction.htm")
+	
+		@RequestMapping(value="deleteAction.htm")
 	public ModelAndView removeAction(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();
@@ -72,7 +76,7 @@ public class ActionController extends MultiActionController {
 		return new ModelAndView("Action/remove");
 	}
 		
-	@RequestMapping(value="deleteAction.htm")
+	@RequestMapping(value="deleteValidateAction.htm")
 	public ModelAndView deleteAction(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();
