@@ -25,7 +25,7 @@ public class ActionController extends MultiActionController {
 			request.setAttribute("actions", aService.findAll());
 			return new ModelAndView("Action/add");
 	}
-		
+	
 	@RequestMapping(value="addValidateAction.htm")
 	public ModelAndView createAction(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
@@ -52,8 +52,13 @@ public class ActionController extends MultiActionController {
 		ActionService aService = new ActionService();
 		request.setAttribute("action", aService.find(id));
 		
-		int nextId=aService.find(id).getAction().getId();
-		request.setAttribute("nextAction", aService.find(nextId));
+		
+		if(aService.find(id).getAction() != null)
+		{
+			int nextId=aService.find(id).getAction().getId();
+			request.setAttribute("nextAction", aService.find(nextId));
+		}
+		
 		return new ModelAndView("Action/details");
 	}
 	
