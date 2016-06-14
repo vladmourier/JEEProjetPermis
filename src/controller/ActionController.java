@@ -10,6 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 import dao.ActionService;
+import dao.GoalService;
+import dao.IndicatorService;
+import dao.LearnerService;
 import metier.Action;
 
 @Controller
@@ -25,7 +28,18 @@ public class ActionController extends MultiActionController {
 		if(id != null){
 			request.setAttribute("MyAction", aService.find(Integer.parseInt(id)));
 		}
+		
 		request.setAttribute("actions", aService.findAll());
+		
+		GoalService gService = new GoalService();
+		request.setAttribute("goals", gService.findAll());
+		
+		IndicatorService iService = new IndicatorService();
+		request.setAttribute("indicators", iService.findAll());
+		
+		LearnerService lService = new LearnerService();
+		request.setAttribute("learners", lService.findAll());
+		
 		return new ModelAndView("Action/add");
 	}
 

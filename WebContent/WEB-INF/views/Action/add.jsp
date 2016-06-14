@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
@@ -45,6 +46,49 @@
 								<c:forEach items="${actions}" var="action">
 									<option value="${action.id }"
 										<c:if test="${fk_action == action.id}"> selected</c:if>>${action.wording}</option>
+								</c:forEach>
+							</SELECT>
+						</div>
+						<div class="form-field form-field-right">
+							<div class="form-label">Objectifs comprenant l'action :</div>
+							<div class="form-input">
+								<c:if test="${isEdit}">
+									<c:set var="objectifs" value="${MyAction.goals }" />
+								</c:if>
+								<SELECT multiple class="form-input" name="goals">
+									<c:forEach items="${goals}" var="goal">
+										<option value="${goal.id }"
+											<c:if test="${isEdit and fn:contains(objectifs, goal) }"> selected</c:if>>${goal.wording}</option>
+									</c:forEach>
+								</SELECT>
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-field form-field-left">
+							<div class="form-label">Indicateurs appliqués à l'action :</div>
+							<c:if test="${isEdit}">
+								<c:set var="indic" value="${MyAction.indicators }" />
+							</c:if>
+							<SELECT multiple class="form-input" name="indicators">
+								<c:forEach items="${indicators}" var="indicator">
+									<option value="${indicator.id }"
+										<c:if test="${isEdit and fn:contains(indic, indicator)}"> selected</c:if>>${indicator.id}</option>
+								</c:forEach>
+							</SELECT>
+						</div>
+						<div class="form-field form-field-right">
+							<div class="form-label">Apprenants ayant obtenu l'action :</div>
+							<c:if test="${isEdit}">
+								<c:set var="learnerActions" value="${MyAction.learnerActions }" />
+							</c:if>
+							<SELECT multiple class="form-input" name="learners">
+								<c:forEach items="${learners}" var="learner">
+									<option value="${learner.id }"
+										<c:if 
+										test="${isEdit and fn:contains(learnerActions, learner.learnerActions)}"> selected</c:if>>
+											${learner.surname} ${learner.forname}
+									</option>
 								</c:forEach>
 							</SELECT>
 						</div>

@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
@@ -50,6 +51,37 @@
 							<div class="form-label">Mot de passe de l'apprenant:</div>
 							<div class="form-input">
 								<input type="text" name="forname" value="${mdp }" />
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-field form-field-left">
+							<div class="form-label">Actions obtenues par l'apprenant :</div>
+							<c:if test="${isEdit}">
+								<c:set var="learnerActions" value="${MyLearner.learnerActions }" />
+							</c:if>
+							<SELECT multiple class="form-input" name="actions">
+								<c:forEach items="${actions}" var="action">
+									<option value="${action.id }"
+										<c:if 
+										test="${isEdit and fn:contains(learnerActions, action.learnerActions)}"> selected</c:if>>
+											${action.wording}
+									</option>
+								</c:forEach>
+							</SELECT>
+						</div>
+						<div class="form-field form-field-right">
+							<div class="form-label">Jeux auxquels est inscrit l'apprenant :</div>
+							<div class="form-input">
+								<c:if test="${isEdit}">
+									<c:set var="jeux" value="${MyLearner.games }" />
+								</c:if>
+								<SELECT multiple class="form-input" name="goals">
+									<c:forEach items="${games}" var="game">
+										<option value="${game.id }"
+											<c:if test="${isEdit and fn:contains(jeux, game) }"> selected</c:if>>${game.wording}</option>
+									</c:forEach>
+								</SELECT>
 							</div>
 						</div>
 					</div>

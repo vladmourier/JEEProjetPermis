@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 import dao.ActionService;
 import dao.GameService;
 import dao.GoalService;
+import dao.LearnerService;
 import metier.Game;
 
 @Controller
@@ -28,6 +29,10 @@ public class GameController extends MultiActionController {
 		if(id != null){
 			request.setAttribute("MyGame", aService.find(Integer.parseInt(id)));
 		}
+		
+		LearnerService lService = new LearnerService();
+		request.setAttribute("learners", lService.findAll());
+		
 		return new ModelAndView("Game/add");
 	}
 	

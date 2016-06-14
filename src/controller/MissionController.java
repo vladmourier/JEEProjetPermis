@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 import dao.GameService;
+import dao.GoalService;
 import dao.MissionService;
 
 @Controller
@@ -28,6 +29,9 @@ public class MissionController extends MultiActionController {
 		}
 		GameService gService = new GameService();
 		request.setAttribute("games", gService.findAll());
+		
+		GoalService goService = new GoalService();
+		request.setAttribute("goals", goService.findAll());
 		return new ModelAndView("Mission/add");
 	}
 	
