@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
+import dao.MissionService;
+
 @Controller
 public class MissionController extends MultiActionController {
 
@@ -18,6 +20,11 @@ public class MissionController extends MultiActionController {
 	@RequestMapping(value="addMission.htm")
 	public ModelAndView addMission(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
+		String id = request.getParameter("id");
+		MissionService aService = new MissionService();
+		if(id != null){
+			request.setAttribute("MyMission", aService.find(Integer.parseInt(id)));
+		}
 		return new ModelAndView("Mission/add");
 	}
 	

@@ -23,6 +23,11 @@ public class GoalController extends MultiActionController {
 	@RequestMapping(value="addGoal.htm")
 	public ModelAndView addGoal(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
+		String id = request.getParameter("id");
+		GoalService aService = new GoalService();
+		if(id != null){
+			request.setAttribute("MyGoal", aService.find(Integer.parseInt(id)));
+		}
 		return new ModelAndView("Goal/add");
 	}
 	

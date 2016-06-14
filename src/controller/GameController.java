@@ -11,6 +11,7 @@ import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 import dao.ActionService;
 import dao.GameService;
+import dao.GoalService;
 import metier.Game;
 
 @Controller
@@ -22,6 +23,11 @@ public class GameController extends MultiActionController {
 	@RequestMapping(value="addGame.htm")
 	public ModelAndView addGame(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
+		String id = request.getParameter("id");
+		GameService aService = new GameService();
+		if(id != null){
+			request.setAttribute("MyGame", aService.find(Integer.parseInt(id)));
+		}
 		return new ModelAndView("Game/add");
 	}
 	

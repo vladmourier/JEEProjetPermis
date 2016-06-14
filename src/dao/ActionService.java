@@ -78,20 +78,20 @@ public class ActionService extends EntityService {
 		return actions;
 	}
 	
-	public List<Action> search(String word)
-	{
-		List<Action> actions = null;
-		try 
-		{
-			EntityTransaction transaction = startTransaction();
-			transaction.begin();
-			actions= (List<Action>) entityManager.createQuery("SELECT a FROM Action a WHERE lower(a.wording) like :word ORDER BY a.id").setParameter("word", "%"+word+"%").getResultList();
-			entityManager.close();
-		} catch (Exception e)
-		{
-			System.out.println(e.getMessage());
-		}
-		return actions;
-	}
+//	public List<Action> search(String word)
+//	{
+//		List<Action> actions = null;
+//		try 
+//		{
+//			EntityTransaction transaction = startTransaction();
+//			transaction.begin();
+//			actions= (List<Action>) entityManager.createQuery("SELECT a FROM Action a WHERE lower(a.wording) like :word ORDER BY a.id").setParameter("word", "%"+word+"%").getResultList();
+//			entityManager.close();
+//		} catch (Exception e)
+//		{
+//			System.out.println(e.getMessage());
+//		}
+//		return actions;
+//	}
 	
 }

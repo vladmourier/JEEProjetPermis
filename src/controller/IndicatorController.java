@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
+import dao.IndicatorService;
+
 @Controller
 public class IndicatorController extends MultiActionController {
 
@@ -18,6 +20,11 @@ public class IndicatorController extends MultiActionController {
 	@RequestMapping(value="addIndicator.htm")
 	public ModelAndView addIndicator(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
+		String id = request.getParameter("id");
+		IndicatorService aService = new IndicatorService();
+		if(id != null){
+			request.setAttribute("MyIndicator", aService.find(Integer.parseInt(id)));
+		}
 		return new ModelAndView("Indicator/add");
 	}
 	

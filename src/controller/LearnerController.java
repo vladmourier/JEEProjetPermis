@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
+import dao.LearnerService;
+
 @Controller
 public class LearnerController extends MultiActionController {
 
@@ -16,7 +18,11 @@ public class LearnerController extends MultiActionController {
 	@RequestMapping(value="addLearner.htm")
 	public ModelAndView addLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-
+		String id = request.getParameter("id");
+		LearnerService aService = new LearnerService();
+		if(id != null){
+			request.setAttribute("MyLearner", aService.find(Integer.parseInt(id)));
+		}
 		return new ModelAndView("Learner/add");
 	}
 	
