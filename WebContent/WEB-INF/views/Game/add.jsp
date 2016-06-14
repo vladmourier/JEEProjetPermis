@@ -6,7 +6,7 @@
 		</div>
 		<div class="main-panel-content">
 			<div class="form">
-				<form action="" method="POST">
+				<form action="addValidateGame.htm" method="POST">
 					<div class="form-row">
 						<div class="form-field">
 							<div class="form-label">Libellé du jeu :</div>

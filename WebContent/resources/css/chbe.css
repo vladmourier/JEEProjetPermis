@@ -227,6 +227,16 @@ No use permitted outside of the CHBE website (chbe.fr), its sub-domains or for t
 .ListStyleTypeNone {list-style-type: none;}
 
 /* SIZES */
+.Height0 {height: 0;}
+.Height0-5em {height: 0.5em;}
+.Height1em {height: 1em;}
+.Height1-5em {height: 1.5em;}
+.Height2em {height: 2em;}
+.Height2-5em {height: 2.5em;}
+.Height3em {height: 3em;}
+.Height5em {height: 5em;}
+.Height10em {height: 10em;}
+
 .colx-0 {width: 0%;}
 .colx-1 {width: 1%;}
 .colx-2 {width: 2%;}
@@ -432,3 +442,11 @@ No use permitted outside of the CHBE website (chbe.fr), its sub-domains or for t
 .coly-99 {height: 99%;}
 .coly-100 {height: 100%;}
 .coly-auto{height: auto;}
+
+
+/*BLOCKS*/
+.fullSizeBlock {
+	height: 100%;
+	width: 100%;
+	display: block;
+}

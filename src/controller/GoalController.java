@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
+import dao.GameService;
+import dao.GoalService;
+import metier.Game;
+import metier.Goal;
+
 @Controller
 public class GoalController extends MultiActionController {
 
@@ -24,26 +29,30 @@ public class GoalController extends MultiActionController {
 	@RequestMapping(value="addValidateGoal.htm")
 	public ModelAndView createGoal(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//TODO creation of a Goal
-		//Service aService = new Service();
-		//aService.createGoal(GOAL_CREATED);
+		Goal gam=new Goal();
+		gam.setWording(request.getParameter("wording"));
+		
+		GoalService aService = new GoalService();
+		aService.insertGoal(gam);
+		
+		listGoal(request,response);
 		return new ModelAndView("Goal/list");
 	}
 	
 	@RequestMapping(value="detailsGoal.htm")
 	public ModelAndView detailsGoal(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//int id = Integer.parseInt(request.getParameter("id"));
-		//request.setAttribute("myGoal", aService.detailsGoal(id));
+		int id = Integer.parseInt(request.getParameter("id"));
+		GoalService aService = new GoalService();
+		request.setAttribute("goal", aService.find(id));
 		return new ModelAndView("Goal/details");
 	}
 	
 	@RequestMapping(value="listGoal.htm")
 	public ModelAndView listGoal(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//request.setAttribute("myGoals", aService.listGoals());
+		GoalService aService = new GoalService();
+		request.setAttribute("goals", aService.findAll());
 		return new ModelAndView("Goal/list");
 	}
 	
