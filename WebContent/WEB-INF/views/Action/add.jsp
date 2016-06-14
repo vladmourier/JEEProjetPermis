@@ -10,6 +10,9 @@
 		<div class="main-panel-content">
 			<div class="form">
 				<form action="addValidateAction.htm" method="POST">
+					<c:if test="${isEdit }">
+						<input type="hidden" name="id" value="${MyAction.id }">
+					</c:if>
 					<div class="form-row">
 						<div class="form-field form-field-left">
 							<div class="form-label">Libellé de l'action :</div>
@@ -41,8 +44,7 @@
 								<option value="-1">Aucune</option>
 								<c:forEach items="${actions}" var="action">
 									<option value="${action.id }"
-										<c:if test="${fk_action == action.id}"> selected</c:if>
-										>${action.wording}</option>
+										<c:if test="${fk_action == action.id}"> selected</c:if>>${action.wording}</option>
 								</c:forEach>
 							</SELECT>
 						</div>

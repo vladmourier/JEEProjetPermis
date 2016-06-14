@@ -1,5 +1,8 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
+	<c:set var="isEdit" value="${MyGame != null}" />
 	<div class="main-panel card">
 		<div class="main-panel-header">
 			<div class="main-panel-title">Créer un jeu</div>
@@ -7,11 +10,17 @@
 		<div class="main-panel-content">
 			<div class="form">
 				<form action="addValidateGame.htm" method="POST">
+					<c:if test="${isEdit }">
+						<input type="hidden" name="id" value="${MyGame.id }">
+					</c:if>
 					<div class="form-row">
 						<div class="form-field">
 							<div class="form-label">Libellé du jeu :</div>
 							<div class="form-input">
-								<input type="text" name="wording" />
+								<c:if test="${isEdit}">
+									<c:set var="wording" value="${MyGame.wording }" />
+								</c:if>
+								<input type="text" name="wording" value="${wording }" />
 							</div>
 						</div>
 					</div>

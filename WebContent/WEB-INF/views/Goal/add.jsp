@@ -9,6 +9,9 @@
 		<div class="main-panel-content">
 			<div class="form">
 				<form action="addValidateGoal.htm" method="POST">
+					<c:if test="${isEdit }">
+						<input type="hidden" name="id" value="${MyGoal.id }">
+					</c:if>
 					<div class="form-row">
 						<div class="form-field">
 							<div class="form-label">Libellé de l'objectif :</div>

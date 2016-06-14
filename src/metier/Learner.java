@@ -96,7 +96,15 @@ public class Learner implements Serializable {
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
 	}
+	
+	public String getEmail(){
+		return email;
+	}
 
+	public void setEmail(String email){
+		this.email = email;
+	}
+	
 	public List<LearnerAction> getLearnerActions() {
 		return this.learnerActions;
 	}

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
+import dao.GameService;
 import dao.MissionService;
 
 @Controller
@@ -25,6 +26,8 @@ public class MissionController extends MultiActionController {
 		if(id != null){
 			request.setAttribute("MyMission", aService.find(Integer.parseInt(id)));
 		}
+		GameService gService = new GameService();
+		request.setAttribute("games", gService.findAll());
 		return new ModelAndView("Mission/add");
 	}
 	

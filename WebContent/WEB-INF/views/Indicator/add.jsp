@@ -1,5 +1,8 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
+	<c:set var="isEdit" value="${MyIndicator != null}" />
 	<div class="main-panel card">
 		<div class="main-panel-header">
 			<div class="main-panel-title">Créer un indicateur</div>
@@ -7,17 +10,26 @@
 		<div class="main-panel-content">
 			<div class="form">
 				<form action="" method="POST">
+					<c:if test="${isEdit }">
+						<input type="hidden" name="id" value="${MyIndicator.id }">
+					</c:if>
 					<div class="form-row">
 						<div class="form-field form-field-left">
-							<div class="form-label">Libellé de l'action :</div>
+							<div class="form-label">Libellé de l'indicateur :</div>
 							<div class="form-input">
-								<input type="text" name="fk_action" />
+								<c:if test="${isEdit}">
+									<c:set var="wording" value="${MyIndicator.wording }" />
+								</c:if>
+								<input type="text" name="wording" value="${wording }" />
 							</div>
 						</div>
 						<div class="form-field form-field-right">
 							<div class="form-label">Poids de l'indicateur :</div>
 							<div class="form-input">
-								<input type="number" name="weight" min="0"/>
+								<c:if test="${isEdit}">
+									<c:set var="weight" value="${MyIndicator.weight}" />
+								</c:if>
+								<input type="number" name="weight" min="0" value="${weight }" />
 							</div>
 						</div>
 					</div>
