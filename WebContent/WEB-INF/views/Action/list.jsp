@@ -9,14 +9,16 @@
 		<c:forEach items="${actions}" var="action">
 			<div class="card card-primary text-xs-center z-depth-2 list-item">
 				<div class="card-block main-panel-content">
-					<p class="white-text">${action.wording}</p>
+					<a class="fullSizeBlock" href="detailsAction.htm?id=${action.id}">
+						<p class="white-text">${action.wording}</p>
+					</a>
 					<span class="buttons-group">
-						<span class="btn btn-default">
-							<a class="glyphicon glyphicon-edit" href="detailsAction.htm?id=${action.id}"></a>
-						</span>
-						<span class="btn btn-warning">
-							<a class="glyphicon glyphicon-remove" href="deleteAction.htm?id=${action.id}"></a>
-						</span>
+						<a class="btn btn-default" href="addAction.htm?id=${action.id}">
+							<span class="glyphicon glyphicon-edit" ></span>
+						</a>
+						<a class="btn btn-warning" href="deleteAction.htm?id=${action.id}">
+							<span class="glyphicon glyphicon-remove"></span>
+						</a>
 					</span>
 				</div>
 			</div>

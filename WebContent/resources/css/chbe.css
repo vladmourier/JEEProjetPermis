@@ -442,3 +442,11 @@ No use permitted outside of the CHBE website (chbe.fr), its sub-domains or for t
 .coly-99 {height: 99%;}
 .coly-100 {height: 100%;}
 .coly-auto{height: auto;}
+
+
+/*BLOCKS*/
+.fullSizeBlock {
+	height: 100%;
+	width: 100%;
+	display: block;
+}

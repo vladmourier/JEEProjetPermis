@@ -7,16 +7,17 @@
 		<c:forEach items="${goals}" var="goal">
 			<div class="card card-primary text-xs-center z-depth-2 list-item">
 				<div class="card-block main-panel-content">
-					<p class="white-text">${goal.wording }</p>
+					<a class="fullSizeBlock" href="detailsGoal.htm?id=${goal.id}">
+						<p class="white-text">${goal.wording}</p>
+					</a>
 					<p class="white-text"></p>
-					<span class="buttons-group"> <span class="btn btn-default"
-						data-toggle="tooltip" data-placement="bottom" title="Details"><a
-							class="glyphicon glyphicon-edit" 
-							href="detailsGoal.htm?id=${goal.id }"></a></span> 
-					<span class="btn btn-warning" data-toggle="tooltip"
-						data-placement="bottom" title="Remove"><a
-							class="glyphicon glyphicon-remove" 
-							href="deleteGoal.htm?id=${goal.id }"></a></span>
+					<span class="buttons-group">
+						<a class="btn btn-default" href="addGoal.htm?id=${goal.id}">
+							<span class="glyphicon glyphicon-edit"></span>
+						</a> 
+						<a class="btn btn-warning" href="deleteGoal.htm?id=${goal.id}">
+							<span class="glyphicon glyphicon-remove"></span>
+						</a>
 					</span>
 				</div>
 		</div>
