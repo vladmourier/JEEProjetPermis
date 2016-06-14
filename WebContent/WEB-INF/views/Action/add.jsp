@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
 	<div class="main-panel card">
@@ -6,7 +8,7 @@
 		</div>
 		<div class="main-panel-content">
 			<div class="form">
-				<form action="" method="POST">
+				<form action="addValidateAction.htm" method="POST">
 					<div class="form-row">
 						<div class="form-field form-field-left">
 							<div class="form-label">Libellé de l'action :</div>
@@ -24,9 +26,11 @@
 					<div class="form-row">
 						<div class="form-field form-field-left">
 							<div class="form-label">Action suivante :</div>
-							<div class="form-input">
-								<input type="text" name="fk_action" />
-							</div>
+							<SELECT class="form-input" name="fk_action">
+								<c:forEach items="${actions}" var="action">
+	        						<option value=${action.id}>${action.wording}</option>
+	        					</c:forEach>
+        					</SELECT>
 						</div>
 					</div>
 					<div class="form-submit">

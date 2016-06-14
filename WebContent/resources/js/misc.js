@@ -59,7 +59,6 @@ function displayContent(HTMLcontent) {
 }
 
 $(".container").click(function(){
-	console.log("a");
 	if($("#searchIcon").find("i").hasClass("fa-times")) {
 		$("#searchInput").removeClass("inputWidth5em").addClass("inputWidth0");
 		$("#searchIcon").find("i").removeClass("fa-times").addClass("fa-search");
@@ -68,7 +67,7 @@ $(".container").click(function(){
 
 $("#searchIcon").click(function(){
 	if($(this).find("i").hasClass("fa-search")) {
-		$("#searchInput").removeClass("inputWidth0").addClass("inputWidth5em");
+		$("#searchInput").removeClass("inputWidth0").addClass("inputWidth5em").focus();
 		$(this).find("i").removeClass("fa-search").addClass("fa-times");
 	} else {
 		$("#searchInput").removeClass("inputWidth5em").addClass("inputWidth0");

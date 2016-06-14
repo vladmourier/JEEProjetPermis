@@ -4,24 +4,17 @@
 	<div class="card-group" data-type="Learner">
 		<div class="card card-primary text-xs-center z-depth-2 list-item">
 			<div class="card-block main-panel-content">
-				<p class="white-text">Apprenant 1</p>
+				<a class="fullSizeBlock" href="detailsLearner.htm?id=">
+					<p class="white-text">Apprenant 1</p>
+				</a>
 				<p class="white-text"></p>
-				<span class="buttons-group"> <span class="btn btn-default"
-					data-toggle="tooltip" data-placement="bottom" title="Modifier"><a
-						class="glyphicon glyphicon-edit"></a></span> <span
-					class="btn btn-warning" data-toggle="tooltip"
-					data-placement="bottom" title="Supprimer"><a
-						class="glyphicon glyphicon-remove"></a></span>
-				</span>
-			</div>
-		</div>
-		<div class="card card-primary text-xs-center z-depth-2 list-item">
-			<div class="card-block main-panel-content">
-				<p class="white-text">Apprenant 2</p>
-				<span class="buttons-group"> <span class="btn btn-default"><a
-						class="glyphicon glyphicon-edit"></a></span> <span
-					class="btn btn-warning"><a
-						class="glyphicon glyphicon-remove"></a></span>
+				<span class="buttons-group">
+					<a class="btn btn-default">
+						<span class="glyphicon glyphicon-edit"></span>
+					</a>
+					<a class="btn btn-warning">
+						<span class="glyphicon glyphicon-remove"></span>
+					</a>
 				</span>
 			</div>
 		</div>
