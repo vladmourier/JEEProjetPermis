@@ -3,6 +3,7 @@ package dao;
 import java.util.*;
 import javax.persistence.EntityTransaction;
 
+import metier.Action;
 import metier.Goal;
 
 public class GoalService extends EntityService {
@@ -24,6 +25,22 @@ public class GoalService extends EntityService {
 		{
 			
 		}
+	}
+	
+	public List<Goal> search(String word)
+	{
+		List<Goal> goals = null;
+		try 
+		{
+			EntityTransaction transaction = startTransaction();
+			transaction.begin();
+			goals= (List<Goal>) entityManager.createQuery("SELECT g FROM Goal g WHERE lower(g.wording) like :word ORDER BY g.id").setParameter("word", "%"+word+"%").getResultList();
+			entityManager.close();
+		} catch (Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+		return goals;
 	}
 	
 	public Goal find(int id)

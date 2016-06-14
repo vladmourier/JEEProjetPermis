@@ -3,6 +3,7 @@ package dao;
 import java.util.*;
 import javax.persistence.EntityTransaction;
 
+import metier.Action;
 import metier.Learner;
 
 public class LearnerService extends EntityService {
@@ -24,6 +25,22 @@ public class LearnerService extends EntityService {
 		{
 			
 		}
+	}
+	
+	public List<Learner> search(String word)
+	{
+		List<Learner> learners = null;
+		try 
+		{
+			EntityTransaction transaction = startTransaction();
+			transaction.begin();
+			learners= (List<Learner>) entityManager.createQuery("SELECT l FROM Learner l WHERE (lower(l.surname) like :word OR lower(l.forename) like :word OR lower(l.email) like :word) ORDER BY l.id").setParameter("word", "%"+word+"%").getResultList();
+			entityManager.close();
+		} catch (Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+		return learners;
 	}
 	
 	public Learner find(int id)

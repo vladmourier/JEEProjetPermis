@@ -21,6 +21,12 @@ public class Learner implements Serializable {
 	private String forname;
 
 	private String surname;
+	
+	private String salt;
+	
+	private String email;
+	
+	private String mdp;
 
 	//bi-directional many-to-many association to Game
 	@ManyToMany
@@ -72,6 +78,23 @@ public class Learner implements Serializable {
 
 	public void setGames(List<Game> games) {
 		this.games = games;
+	}
+	
+
+	public String getSalt() {
+		return salt;
+	}
+
+	public void setSalt(String salt) {
+		this.salt = salt;
+	}
+
+	public String getMdp() {
+		return mdp;
+	}
+
+	public void setMdp(String mdp) {
+		this.mdp = mdp;
 	}
 
 	public List<LearnerAction> getLearnerActions() {
