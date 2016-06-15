@@ -2,7 +2,11 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
-	<h1 class="page-title">Liste des objectifs</h1>
+	<h1 class="page-title">Objectifs 		<a href="addGoal.htm">
+			<p class="btn btn-success btn-success-custom">
+				<span class="glyphicon glyphicon-plus"></span>
+			</p>
+		</a></h1>
 	<div class="card-group" data-type="Goal">
 		<c:forEach items="${goals}" var="goal">
 			<div class="card card-primary text-xs-center z-depth-2 list-item">

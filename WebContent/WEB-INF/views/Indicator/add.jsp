@@ -36,12 +36,13 @@
 					<div class="form-row">
 						<div class="form-field form-field-left">
 							<div class="form-label">Action valorisée par l'indicateur :</div>
-
-							<select multiple class="chosen-select" name="fk_action">
-								<c:forEach items="${actions}" var="action">
-									<option value="${action.id }">${action.wording}</option>
-								</c:forEach>
-							</select>
+							<div class="form-input">
+								<select multiple class="chosen-select" name="fk_action">
+									<c:forEach items="${actions}" var="action">
+										<option value="${action.id }">${action.wording}</option>
+									</c:forEach>
+								</select>
+							</div>
 						</div>
 					</div>
 					<div class="form-submit">

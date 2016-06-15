@@ -57,6 +57,7 @@
 					<div class="form-row">
 						<div class="form-field form-field-left">
 							<div class="form-label">Actions obtenues par l'apprenant :</div>
+							<div class="form-input">
 							<c:if test="${isEdit}">
 								<c:set var="learnerActions" value="${MyLearner.learnerActions }" />
 							</c:if>
@@ -69,6 +70,7 @@
 									</option>
 								</c:forEach>
 							</SELECT>
+							</div>
 						</div>
 						<div class="form-field form-field-right">
 							<div class="form-label">Jeux auxquels est inscrit l'apprenant :</div>

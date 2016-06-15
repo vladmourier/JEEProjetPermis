@@ -1,7 +1,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
-	<h1 class="page-title">Liste des indicateurs</h1>
+	<h1 class="page-title">Indicateurs 		<a href="addIndicator.htm">
+			<p class="btn btn-success btn-success-custom">
+				<span class="glyphicon glyphicon-plus"></span>
+			</p>
+		</a></h1>
 	<div class="card-group" data-type="Indicator">
 		<c:forEach items="${indicators}" var="indicator">
 			<div class="card card-primary text-xs-center z-depth-2 list-item">

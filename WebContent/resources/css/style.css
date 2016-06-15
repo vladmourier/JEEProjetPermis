@@ -293,7 +293,7 @@ footer .dropdown-toggle {
 }
 
 .page-title {
-	color: #4285F4;
+	/*	color: #4285F4;*/
 	border-bottom: 1px solid lightgray;
 	font-family: inherit;
 }
@@ -344,6 +344,11 @@ footer .dropdown-toggle {
 
 .buttons-group a {
 	color: white !important;
+}
+
+.btn-success-custom {
+	background-color: rgb(25, 170, 3);
+	float: right;
 }
 
 .card-group {
