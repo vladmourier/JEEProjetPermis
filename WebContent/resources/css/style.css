@@ -365,6 +365,7 @@ input[type="number"] {
 
 .form-field {
 	display: inline-flex;
+	height: inherit;
 }
 
 
@@ -396,8 +397,8 @@ textarea:focus {
 
 .form-field-left {
 	border-right: 1px grey solid;
-	/*width: 45%*/;
 	margin-right: 5%;
+	min-height: inherit;
 }
 
 .form-field-right {
@@ -414,4 +415,11 @@ textarea:focus {
 
 .form-submit {
 	float: right;
+}
+.form-row{
+	min-height: 100px;
+}
+.form-input{
+	min-width: 60%;
+	height: 55%;
 }

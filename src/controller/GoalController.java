@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
+import dao.ActionService;
 import dao.GameService;
 import dao.GoalService;
+import dao.MissionService;
 import metier.Game;
 import metier.Goal;
 
@@ -28,6 +30,12 @@ public class GoalController extends MultiActionController {
 		if(id != null){
 			request.setAttribute("MyGoal", aService.find(Integer.parseInt(id)));
 		}
+		
+		MissionService mService = new MissionService();
+		request.setAttribute("missions", mService.findAll());
+		
+		ActionService acService = new ActionService();
+		request.setAttribute("actions", acService.findAll());
 		return new ModelAndView("Goal/add");
 	}
 	
