@@ -60,7 +60,7 @@
 							<c:if test="${isEdit}">
 								<c:set var="learnerActions" value="${MyLearner.learnerActions }" />
 							</c:if>
-							<SELECT multiple class="form-input" name="actions">
+							<select multiple class="chosen-select" class="form-input" name="actions">
 								<c:forEach items="${actions}" var="action">
 									<option value="${action.id }"
 										<c:if 
@@ -76,7 +76,7 @@
 								<c:if test="${isEdit}">
 									<c:set var="jeux" value="${MyLearner.games }" />
 								</c:if>
-								<SELECT multiple class="form-input" name="goals">
+								<select multiple class="chosen-select" class="form-input" name="goals">
 									<c:forEach items="${games}" var="game">
 										<option value="${game.id }"
 											<c:if test="${isEdit and fn:contains(jeux, game) }"> selected</c:if>>${game.wording}</option>

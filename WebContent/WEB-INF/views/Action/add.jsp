@@ -6,7 +6,13 @@
 	<c:set var="isEdit" value="${MyAction != null}" />
 	<div class="main-panel card">
 		<div class="main-panel-header">
-			<div class="main-panel-title"><c:choose><c:when test="${isEdit }">Editer</c:when><c:otherwise>Créer</c:otherwise></c:choose> une action</div>
+			<div class="main-panel-title">
+				<c:choose>
+					<c:when test="${isEdit }">Editer</c:when>
+					<c:otherwise>Créer</c:otherwise>
+				</c:choose>
+				une action
+			</div>
 		</div>
 		<div class="main-panel-content">
 			<div class="form">
@@ -38,16 +44,18 @@
 					<div class="form-row">
 						<div class="form-field form-field-left">
 							<div class="form-label">Action suivante :</div>
-							<c:if test="${isEdit}">
-								<c:set var="fk_action" value="${MyAction.action.id }" />
-							</c:if>
-							<SELECT class="form-input" name="fk_action">
-								<option value="-1">Aucune</option>
-								<c:forEach items="${actions}" var="action">
-									<option value="${action.id }"
-										<c:if test="${fk_action == action.id}"> selected</c:if>>${action.wording}</option>
-								</c:forEach>
-							</SELECT>
+							<div class="form-input">
+								<c:if test="${isEdit}">
+									<c:set var="fk_action" value="${MyAction.action.id }" />
+								</c:if>
+								<SELECT name="fk_action">
+									<option value="-1">Aucune</option>
+									<c:forEach items="${actions}" var="action">
+										<option value="${action.id }"
+											<c:if test="${fk_action == action.id}"> selected</c:if>>${action.wording}</option>
+									</c:forEach>
+								</SELECT>
+							</div>
 						</div>
 						<div class="form-field form-field-right">
 							<div class="form-label">Objectifs comprenant l'action :</div>
@@ -55,7 +63,7 @@
 								<c:if test="${isEdit}">
 									<c:set var="objectifs" value="${MyAction.goals }" />
 								</c:if>
-								<SELECT multiple class="form-input" name="goals">
+								<select multiple class="chosen-select" name="goals">
 									<c:forEach items="${goals}" var="goal">
 										<option value="${goal.id }"
 											<c:if test="${isEdit and fn:contains(objectifs, goal) }"> selected</c:if>>${goal.wording}</option>
@@ -67,30 +75,33 @@
 					<div class="form-row">
 						<div class="form-field form-field-left">
 							<div class="form-label">Indicateurs appliqués à l'action :</div>
-							<c:if test="${isEdit}">
-								<c:set var="indic" value="${MyAction.indicators }" />
-							</c:if>
-							<SELECT multiple class="form-input" name="indicators">
-								<c:forEach items="${indicators}" var="indicator">
-									<option value="${indicator.id }"
-										<c:if test="${isEdit and fn:contains(indic, indicator)}"> selected</c:if>>${indicator.id}</option>
-								</c:forEach>
-							</SELECT>
+							<div class="form-input">
+								<c:if test="${isEdit}">
+									<c:set var="indic" value="${MyAction.indicators }" />
+								</c:if>
+								<select multiple class="chosen-select" name="indicators">
+									<c:forEach items="${indicators}" var="indicator">
+										<option value="${indicator.id }"
+											<c:if test="${isEdit and fn:contains(indic, indicator)}"> selected</c:if>>${indicator.id}</option>
+									</c:forEach>
+								</SELECT>
+							</div>
 						</div>
 						<div class="form-field form-field-right">
 							<div class="form-label">Apprenants ayant obtenu l'action :</div>
-							<c:if test="${isEdit}">
-								<c:set var="learnerActions" value="${MyAction.learnerActions }" />
-							</c:if>
-							<SELECT multiple class="form-input" name="learners">
-								<c:forEach items="${learners}" var="learner">
-									<option value="${learner.id }"
-										<c:if 
+							<div class="form-input">
+								<c:if test="${isEdit}">
+									<c:set var="learnerActions" value="${MyAction.learnerActions }" />
+								</c:if>
+								<select multiple class="chosen-select" name="learners">
+									<c:forEach items="${learners}" var="learner">
+										<option value="${learner.id }"
+											<c:if 
 										test="${isEdit and fn:contains(learnerActions, learner.learnerActions)}"> selected</c:if>>
-											${learner.surname} ${learner.forname}
-									</option>
-								</c:forEach>
-							</SELECT>
+											${learner.surname} ${learner.forname}</option>
+									</c:forEach>
+								</SELECT>
+							</div>
 						</div>
 					</div>
 					<div class="form-submit">

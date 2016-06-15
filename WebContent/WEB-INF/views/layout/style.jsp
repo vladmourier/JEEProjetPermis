@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="resources/lib/ionicons/css/ionicons.min.css"/>
 <link rel="stylesheet" href="resources/lib/mdb/css/mdb.min.css"/>
 <link rel="stylesheet" href="resources/lib/wow/animate.min.css"/>
+<link rel="stylesheet" href="resources/lib/chosen/chosen.min.css"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poiret+One'>
 

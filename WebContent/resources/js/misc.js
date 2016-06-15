@@ -1,14 +1,22 @@
 $(document).ready(function() {
 	listenToClick();
 	HighLightMenuItem();
+	activateChosen();
 });
 
-$(function () {
-	$('[data-toggle="tooltip"]').tooltip({'container': 'body'});
+$(function() {
+	$('[data-toggle="tooltip"]').tooltip({
+		'container' : 'body'
+	});
 });
 
+function activateChosen() {
+	$(".chosen-select").chosen({
 
-function HighLightMenuItem(){
+	});
+}
+
+function HighLightMenuItem() {
 	$("ul.nav.navbar-nav li").mouseenter(function() {
 		$(this).addClass("active");
 	})
@@ -40,8 +48,6 @@ function getForm() {
 	});
 }
 
-
-
 function displayContent(HTMLcontent) {
 	$(HTMLcontent)
 			.find(".main-panel-title")
@@ -52,25 +58,35 @@ function displayContent(HTMLcontent) {
 	$(".card-create-item").remove();
 	$(".card-group").append($(HTMLcontent).fadeIn());
 	$(".card-group").append(button);
+	activateChosen();
 	listenToClick();
 	$(".delete").click(function() {
 		$(HTMLcontent).fadeOut("slow");
 	});
 }
 
-$(".container").click(function(){
-	if($("#searchIcon").find("i").hasClass("fa-times")) {
-		$("#searchInput").removeClass("inputWidth5em").addClass("inputWidth0");
-		$("#searchIcon").find("i").removeClass("fa-times").addClass("fa-search");
-	}
-});
+$(".container").click(
+		function() {
+			if ($("#searchIcon").find("i").hasClass("fa-times")) {
+				$("#searchInput").removeClass("inputWidth5em").addClass(
+						"inputWidth0");
+				$("#searchIcon").find("i").removeClass("fa-times").addClass(
+						"fa-search");
+			}
+		});
 
-$("#searchIcon").click(function(){
-	if($(this).find("i").hasClass("fa-search")) {
-		$("#searchInput").removeClass("inputWidth0").addClass("inputWidth5em").focus();
-		$(this).find("i").removeClass("fa-search").addClass("fa-times");
-	} else {
-		$("#searchInput").removeClass("inputWidth5em").addClass("inputWidth0");
-		$(this).find("i").removeClass("fa-times").addClass("fa-search");
-	}
-});
+$("#searchIcon")
+		.click(
+				function() {
+					if ($(this).find("i").hasClass("fa-search")) {
+						$("#searchInput").removeClass("inputWidth0").addClass(
+								"inputWidth5em").focus();
+						$(this).find("i").removeClass("fa-search").addClass(
+								"fa-times");
+					} else {
+						$("#searchInput").removeClass("inputWidth5em")
+								.addClass("inputWidth0");
+						$(this).find("i").removeClass("fa-times").addClass(
+								"fa-search");
+					}
+				});

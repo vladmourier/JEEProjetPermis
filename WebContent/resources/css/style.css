@@ -5,9 +5,8 @@
  *   * *   *  *  * * * *
  *** *** ***  *  *** * *
 **********************************************************/
-
-
-.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover
+	{
 	background-color: #4285F4;
 }
 
@@ -25,7 +24,8 @@
 }
 
 .BGCustom, .BGCustom:focus, .BGCustom:active, .BGCustom:hover, .BGCustom:visited
-.BG4285F4, .BG4285F4:focus, .BG4285F4:active, .BG4285F4:hover, .BG4285F4:visited {
+.BG4285F4, .BG4285F4:focus, .BG4285F4:active, .BG4285F4:hover, .BG4285F4:visited
+	{
 	background-color: #4285F4 !important;
 }
 
@@ -39,6 +39,7 @@
 @media screen and (min-width: 1200px) {
 	.form-field-left {
 		min-width: 45%;
+		max-width: 45%;
 	}
 }
 
@@ -51,6 +52,9 @@
 	}
 	.form-field-left {
 		border-right: none !important;
+	}
+	.chosen-container {
+		width: 100% !important;
 	}
 }
 
@@ -100,6 +104,12 @@
 	left: 10%;
 	color: #FFFFFF;
 	max-width: 30.75em;
+}
+/***********************************************************
+	CHOSEN
+ **********************************************************/
+.chosen-container.chosen-with-drop .chosen-drop {
+	top: auto;
 }
 
 /***********************************************************
@@ -346,6 +356,10 @@ footer .dropdown-toggle {
 	padding: 10px;
 }
 
+.main-panel.card {
+	overflow: visible !important;
+}
+
 .card-create-item {
 	/* 	width: 50px; */
 	/* 	height: 50px; */
@@ -359,6 +373,11 @@ footer .dropdown-toggle {
  *   * * * * *   *   *
  *   *** * * *   * ***
 ***********************************************************/
+form {
+	display: inline-block;
+	width: 100%;
+}
+
 input[type="number"] {
 	text-align: right;
 }
@@ -367,7 +386,6 @@ input[type="number"] {
 	display: inline-flex;
 	height: inherit;
 }
-
 
 .inputWidth0 {
 	width: 0 !important;
@@ -391,8 +409,8 @@ textarea {
 }
 
 textarea:focus {
-    border-bottom: 1px solid #4285F4;
-    box-shadow: 0 1px 0 0 #4285F4;
+	border-bottom: 1px solid #4285F4;
+	box-shadow: 0 1px 0 0 #4285F4;
 }
 
 .form-field-left {
@@ -403,7 +421,6 @@ textarea:focus {
 
 .form-field-right {
 	width: 40%;
-	
 }
 
 .form-label {
@@ -416,14 +433,16 @@ textarea:focus {
 .form-submit {
 	float: right;
 }
-.form-row{
+
+.form-row {
 	min-height: 100px;
 }
-.form-input{
+
+.form-input {
 	min-width: 60%;
 	height: 55%;
 }
 
-.form-input select, .form-input input{
+.form-input select, .form-input input {
 	width: 100%;
 }

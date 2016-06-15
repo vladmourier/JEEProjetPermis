@@ -35,7 +35,7 @@
 									TODO : pré-remplissage
 									<c:set var="wording" value="${MyGoal.wording }" />
 								</c:if>
-								<select multiple name="missions">
+								<select multiple class="chosen-select" name="missions">
 									<c:forEach items="${missions }" var="mission">
 										<option value="${mission.id }">${mission.wording }</option>
 									</c:forEach>
@@ -50,7 +50,7 @@
 								<c:if test="${isEdit}">
 									<c:set var="wording" value="${MyGoal.wording }" />
 								</c:if>
-								<select multiple name="actions">
+								<select multiple class="chosen-select" name="actions">
 									<c:forEach items="${actions }" var="action">
 										<option value="${action.id }">${action.wording }</option>
 									</c:forEach>

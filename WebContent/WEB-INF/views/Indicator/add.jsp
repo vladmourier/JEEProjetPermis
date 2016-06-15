@@ -14,15 +14,15 @@
 						<input type="hidden" name="id" value="${MyIndicator.id }">
 					</c:if>
 					<div class="form-row">
-												<div class="form-field form-field-left">
-													<div class="form-label">Libellé de l'indicateur :</div>
-													<div class="form-input">
-<%-- 														<c:if test="${isEdit}"> --%>
-<%-- 															<c:set var="wording" value="${MyIndicator.wording }" /> --%>
-<%-- 														</c:if> --%>
-<%-- 														<input type="text" name="wording" value="${wording }" /> --%>
-													</div>
-												</div>
+						<div class="form-field form-field-left">
+							<div class="form-label">Libellé de l'indicateur :</div>
+							<div class="form-input">
+								<%-- 														<c:if test="${isEdit}"> --%>
+								<%-- 															<c:set var="wording" value="${MyIndicator.wording }" /> --%>
+								<%-- 														</c:if> --%>
+								<%-- 														<input type="text" name="wording" value="${wording }" /> --%>
+							</div>
+						</div>
 						<div class="form-field form-field-right">
 							<div class="form-label">Poids de l'indicateur :</div>
 							<div class="form-input">
@@ -37,7 +37,7 @@
 						<div class="form-field form-field-left">
 							<div class="form-label">Action valorisée par l'indicateur :</div>
 
-							<select multiple name="fk_action">
+							<select multiple class="chosen-select" name="fk_action">
 								<c:forEach items="${actions}" var="action">
 									<option value="${action.id }">${action.wording}</option>
 								</c:forEach>
