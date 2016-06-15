@@ -6,7 +6,7 @@
 	<c:set var="isEdit" value="${MyAction != null}" />
 	<div class="main-panel card">
 		<div class="main-panel-header">
-			<div class="main-panel-title">Créer une action</div>
+			<div class="main-panel-title"><c:choose><c:when test="${isEdit }">Editer</c:when><c:otherwise>CrÃ©er</c:otherwise></c:choose> une action</div>
 		</div>
 		<div class="main-panel-content">
 			<div class="form">
@@ -16,7 +16,7 @@
 					</c:if>
 					<div class="form-row">
 						<div class="form-field form-field-left">
-							<div class="form-label">Libellé de l'action :</div>
+							<div class="form-label">LibellÃ© de l'action :</div>
 							<div class="form-input">
 								<c:if test="${isEdit}">
 									<c:set var="wording" value="${MyAction.wording }" />
@@ -66,7 +66,7 @@
 					</div>
 					<div class="form-row">
 						<div class="form-field form-field-left">
-							<div class="form-label">Indicateurs appliqués à l'action :</div>
+							<div class="form-label">Indicateurs appliquÃ©s Ã  l'action :</div>
 							<c:if test="${isEdit}">
 								<c:set var="indic" value="${MyAction.indicators }" />
 							</c:if>
