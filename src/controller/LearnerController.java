@@ -11,7 +11,9 @@ import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 import dao.ActionService;
 import dao.GameService;
+import dao.IndicatorService;
 import dao.LearnerService;
+import metier.Learner;
 
 @Controller
 public class LearnerController extends MultiActionController {
@@ -38,32 +40,47 @@ public class LearnerController extends MultiActionController {
 	@RequestMapping(value="addValidateLearner.htm")
 	public ModelAndView createLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//TODO creation of an Learner
-		//Service aService = new Service();
-		//aService.createLearner(Learner_CREATED);
+		Learner lea = new Learner();
+		lea.setForname(request.getParameter("forname"));
+		lea.setSurname(request.getParameter("surname"));
+		lea.setEmail(request.getParameter("email"));
+		lea.setMdp(request.getParameter("mdp"));
+		//Todo salt ?
+		
+		LearnerService lService = new LearnerService();
+		lService.insertLearner(lea);
+		
+		listLearner(request, response);
 		return new ModelAndView("Learner/list");
 	}
 	
 	@RequestMapping(value="detailsLearner.htm")
 	public ModelAndView detailsLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//int id = Integer.parseInt(request.getParameter("id"));
-		//request.setAttribute("myLearner", aService.detailsLearner(id));
+		int id = Integer.parseInt(request.getParameter("id"));
+		LearnerService lService = new LearnerService();
+		request.setAttribute("learner", lService.find(id));
+		
 		return new ModelAndView("Learner/details");
 	}
 	
 	@RequestMapping(value="listLearner.htm")
 	public ModelAndView listLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//request.setAttribute("myLearners", aService.listLearners());
+		LearnerService lService = new LearnerService();
+		request.setAttribute("learners", lService.findAll());
 		return new ModelAndView("Learner/list");
 	}
 	
-	@RequestMapping(value="deleteeLearner.htm")
+	@RequestMapping(value="deleteLearner.htm")
 	public ModelAndView removeLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
+
+		int id = Integer.parseInt(request.getParameter("id"));
+		LearnerService lService = new LearnerService();
+		//Attente de l'implémentation du service associé
+		
+		
 		//Service aService = new Service();
 		//int id = Integer.parseInt(request.getParameter("id"));
 		//request.setAttribute("myLearner", aService.detailsLearner(id));
@@ -73,6 +90,12 @@ public class LearnerController extends MultiActionController {
 	@RequestMapping(value="deleteValidateLearner.htm")
 	public ModelAndView deleteLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
+
+		int id = Integer.parseInt(request.getParameter("id"));
+		LearnerService lService = new LearnerService();
+		//Attente de l'implémentation du service associé
+		
+		
 		//Service aService = new Service();
 		//int id = Integer.parseInt(request.getParameter("id"));
 		//aService.deleteLearner(id);
