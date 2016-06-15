@@ -296,6 +296,9 @@ footer .dropdown-toggle {
 	/*	color: #4285F4;*/
 	border-bottom: 1px solid lightgray;
 	font-family: inherit;
+	padding-bottom: 10px;
+	display: inline-block;
+	width: 100%;
 }
 
 .list-item {
@@ -320,11 +323,14 @@ footer .dropdown-toggle {
 
 .main-panel-header {
 	background-color: #4285F4;
+	display: inline-block;
+	width: 100%;
 }
 
 .main-panel-title {
 	padding: 1%;
 	color: white;
+	font-size: 24px;
 }
 
 .main-panel-content {
@@ -349,6 +355,7 @@ footer .dropdown-toggle {
 .btn-success-custom {
 	background-color: rgb(25, 170, 3);
 	float: right;
+	margin-top: 20px;
 }
 
 .card-group {
