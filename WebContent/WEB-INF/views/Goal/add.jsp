@@ -9,7 +9,7 @@
 					<c:when test="${isEdit }">Editer</c:when>
 					<c:otherwise>Créer</c:otherwise>
 				</c:choose>
-				un Objectif
+				un Objectif ${missions} ${actions }
 			</div>
 		</div>
 		<div class="main-panel-content">
@@ -40,7 +40,6 @@
 										<option value="${mission.id }">${mission.wording }</option>
 									</c:forEach>
 								</select>
-
 							</div>
 						</div>
 					</div>
@@ -59,13 +58,12 @@
 							</div>
 						</div>
 					</div>
+					<div class="form-submit">
+						<input class="btn btn-primary" type="submit" value="Valider" />
+					</div>
+				</form>
 			</div>
-			<div class="form-submit">
-				<input class="btn btn-primary" type="submit" value="Valider" />
-			</div>
-			</form>
 		</div>
 	</div>
-</div>
 </div>
 <jsp:include page="../layout/afterContent.jsp"></jsp:include>
