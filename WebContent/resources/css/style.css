@@ -53,6 +53,9 @@
 	.form-field-left {
 		border-right: none !important;
 	}
+	.form-row {
+		display: block !important;
+	}
 }
 
 /***********************************************************
@@ -107,6 +110,10 @@
  **********************************************************/
 .chosen-container.chosen-with-drop .chosen-drop {
 	top: auto;
+}
+
+.chosen-container {
+	width: 100% !important;
 }
 
 /***********************************************************
@@ -382,6 +389,8 @@ input[type="number"] {
 .form-field {
 	display: inline-flex;
 	height: inherit;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .inputWidth0 {
@@ -418,13 +427,15 @@ textarea:focus {
 
 .form-field-right {
 	width: 40%;
+	min-height: inherit;
 }
 
 .form-label {
-	width: 30%;
+	min-width: 35%;
 	padding-top: 12px;
 	margin-right: 5px;
 	padding-top: 12px;
+	max-width: 35%;
 }
 
 .form-submit {
@@ -433,17 +444,17 @@ textarea:focus {
 
 .form-row {
 	min-height: 100px;
+	display: inline-flex;
+	min-width: 100%;
+	max-width: 100%;
 }
 
 .form-input {
 	min-width: 60%;
+	max-width: 60%;
 	height: 55%;
 }
 
 .form-input select, .form-input input {
 	width: 100%;
-}
-
-.chosen-container {
-	width: 100% !important;
 }

@@ -12,7 +12,7 @@ $(function() {
 
 function activateChosen() {
 	$(".chosen-select").chosen({
-
+		width: "100%"
 	});
 }
 
