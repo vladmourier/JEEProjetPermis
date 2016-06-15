@@ -28,7 +28,7 @@ public class GoalController extends MultiActionController {
 		String id = request.getParameter("id");
 		GoalService aService = new GoalService();
 		if(id != null){
-			request.setAttribute("MyGoal", aService.find(Integer.parseInt(id)));
+			request.setAttribute("goal", aService.find(Integer.parseInt(id)));
 		}
 		
 		MissionService mService = new MissionService();

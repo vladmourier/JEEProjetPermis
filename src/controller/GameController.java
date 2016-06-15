@@ -27,7 +27,7 @@ public class GameController extends MultiActionController {
 		String id = request.getParameter("id");
 		GameService aService = new GameService();
 		if(id != null){
-			request.setAttribute("MyGame", aService.find(Integer.parseInt(id)));
+			request.setAttribute("game", aService.find(Integer.parseInt(id)));
 		}
 		
 		LearnerService lService = new LearnerService();

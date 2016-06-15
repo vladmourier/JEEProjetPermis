@@ -55,6 +55,11 @@
 						</li>
                     </ul>
                 </li>
+                <li class="hoverable">
+                	<a href="#" class="waves-effect waves-light">
+                    	<i class="fa fa-tachometer"></i> Dashboard
+                    </a>
+                </li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown hoverable">
@@ -65,6 +70,11 @@
                         <li class="hoverable">
                         	<a href="login.htm" class="waves-effect waves-light">
                         		<i class="fa fa-key"></i> Connexion
+                        	</a>
+                        </li>
+                        <li class="hoverable">
+                        	<a href="register.htm" class="waves-effect waves-light">
+                        		<i class="fa fa-user-plus"></i> Inscription
                         	</a>
                         </li>
                     </ul>

@@ -11,6 +11,7 @@ import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 import dao.ActionService;
 import dao.IndicatorService;
+import metier.Indicator;
 
 @Controller
 public class IndicatorController extends MultiActionController {
@@ -24,7 +25,7 @@ public class IndicatorController extends MultiActionController {
 		String id = request.getParameter("id");
 		IndicatorService aService = new IndicatorService();
 		if(id != null){
-			request.setAttribute("MyIndicator", aService.find(Integer.parseInt(id)));
+			request.setAttribute("indicator", aService.find(Integer.parseInt(id)));
 		}
 		
 		ActionService acService = new ActionService();
@@ -36,32 +37,43 @@ public class IndicatorController extends MultiActionController {
 	@RequestMapping(value="addValidateIndicator.htm")
 	public ModelAndView createIndicator(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//TODO creation of a Indicator
-		//Service aService = new Service();
-		//aService.createIndicator(INDICATOR_CREATED);
+		Indicator ind = new Indicator();
+		ActionService acService = new ActionService();
+		
+		ind.setWeight(Integer.parseInt(request.getParameter("weight")));
+		ind.setAction(acService.find(Integer.parseInt(request.getParameter("fk_action"))));
+
+		IndicatorService iService = new IndicatorService();
+		iService.insertIndicator(ind);
+		
+		listIndicator(request, response);
 		return new ModelAndView("Indicator/list");
 	}
 	
 	@RequestMapping(value="detailsIndicator.htm")
 	public ModelAndView detailsIndicator(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		IndicatorService aService = new IndicatorService();
 		int id = Integer.parseInt(request.getParameter("id"));
-		request.setAttribute("myIndicator", aService.find(id));
+		IndicatorService iService = new IndicatorService();
+		request.setAttribute("indicator", iService.find(id));
 		return new ModelAndView("Indicator/details");
 	}
 	
 	@RequestMapping(value="listIndicator.htm")
 	public ModelAndView listIndicator(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		IndicatorService aService = new IndicatorService();
-		request.setAttribute("indicators", aService.findAll());
+		IndicatorService iService = new IndicatorService();
+		request.setAttribute("indicators", iService.findAll());
 		return new ModelAndView("Indicator/list");
 	}
 	
 	@RequestMapping(value="deleteIndicator.htm")
 	public ModelAndView removeIndicator(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
+		int id = Integer.parseInt(request.getParameter("id"));
+		IndicatorService iService = new IndicatorService();
+		//Attente de l'implémentation du service associé
+		
 		//Service aService = new Service();
 		//int id = Integer.parseInt(request.getParameter("id"));
 		//request.setAttribute("myIndicator", aService.detailsIndicator(id));
@@ -71,6 +83,10 @@ public class IndicatorController extends MultiActionController {
 	@RequestMapping(value="deleteValidateIndicator.htm")
 	public ModelAndView deleteIndicator(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
+		int id = Integer.parseInt(request.getParameter("id"));
+		IndicatorService iService = new IndicatorService();
+		//Attente de l'implémentation du service associé
+		
 		//Service aService = new Service();
 		//int id = Integer.parseInt(request.getParameter("id"));
 		//aService.deleteIndicator(id);

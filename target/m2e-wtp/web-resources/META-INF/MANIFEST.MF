@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 Manifest-Version: 1.0
-Built-By: Corentin
-Build-Jdk: 1.8.0_40
+Built-By: Adrien
+Build-Jdk: 1.8.0_77
 Created-By: Maven Integration for Eclipse
->>>>>>> origin/master
 

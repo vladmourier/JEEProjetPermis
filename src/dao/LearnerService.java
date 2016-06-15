@@ -8,7 +8,7 @@ import metier.Learner;
 
 public class LearnerService extends EntityService {
 	
-	public void insertGoal(Learner learner)
+	public void insertLearner(Learner learner)
 	{
 		try
 		{

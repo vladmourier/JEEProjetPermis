@@ -5,7 +5,7 @@
 	<c:set var="isEdit" value="${MyMission != null}" />
 	<div class="main-panel card">
 		<div class="main-panel-header">
-			<div class="main-panel-title"><c:choose><c:when test="${isEdit }">Editer</c:when><c:otherwise>Ajouter</c:otherwise></c:choose> une mission</div>
+			<div class="main-panel-title">Ajouter une mission</div>
 		</div>
 		<div class="main-panel-content">
 			<div class="form">
