@@ -49,6 +49,12 @@ public class BaseController extends MultiActionController {
 	public ModelAndView registerValidate(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		try {
+			Learner l = new Learner();
+			l.setEmail(request.getParameter("email"));
+			l.setForname(request.getParameter("firstname"));
+			l.setSurname(request.getParameter("lastname"));
+			
+			//LearnerService.
 			SendEmail.sendMail("Votre insription sur le site AeroSafety a été effectuée avec succès.", request.getParameter("email"));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
