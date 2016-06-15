@@ -9,11 +9,11 @@
 		<div class="main-panel-content">
 			<table class="table table-responsive table-hover">
 				<tr>
-					<td class="table-field">ID de l'objectif</td>
+					<td class="table-field">ID :</td>
 					<td>${goal.id}</td>
 				</tr>
 				<tr>
-					<td class="table-field">Libellé de l'objectif</td>
+					<td class="table-field">Libellé :</td>
 					<td>${goal.wording}</td>	
 				</tr>
 			</table>

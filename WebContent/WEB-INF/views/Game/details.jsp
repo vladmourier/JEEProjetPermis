@@ -8,15 +8,15 @@
 		<div class="main-panel-content">
 			<table class="table table-responsive table-hover">
 				<tr>
-					<td class="table-field">ID du jeu</td>
+					<td class="table-field">ID :</td>
 					<td>${game.id }</td>
 				</tr>
 				<tr>
-					<td class="table-field">Libellé du jeu</td>
+					<td class="table-field">Libellé :</td>
 					<td>${game.wording }</td>
 				</tr>
 				<tr>
-					<td class="table-field">Actions du jeu</td>
+					<td class="table-field">Actions du jeu :</td>
 					<td>
 						<ul>
 							<c:forEach items="${game.actions}" var="action">
@@ -27,7 +27,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td class="table-field">Apprenants inscrits</td>
+					<td class="table-field">Apprenants inscrits :</td>
 					<td>
 						<ul>
 							<c:forEach items="${game.learners}" var="learner">
@@ -38,7 +38,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td class="table-field">Missions du jeu</td>
+					<td class="table-field">Missions :</td>
 					<td>
 						<ul>
 							<c:forEach items="${game.missions}" var="mission">

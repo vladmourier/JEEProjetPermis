@@ -25,7 +25,7 @@
 				</tr>
 				<tr>
 					<td class="table-field">Jeux auxquels est inscrit l'apprenant</td>
-					<td>${myLearner.games }
+					<td>
 						<ul>
 							<c:forEach items="${myLearner.games }" var="game">
 								<li><a href="detailsGame.htm?id=${game.id }">${game.wording }</a></li>
@@ -35,7 +35,7 @@
 				</tr>
 				<tr>
 					<td class="table-field">Actions obtenues</td>
-					<td>${myLearner.learnerActions }
+					<td>
 						<ul>
 							<c:forEach items="${myLearner.learnerActions }"
 								var="learnerAction">
