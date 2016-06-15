@@ -25,7 +25,7 @@ public class MissionController extends MultiActionController {
 		String id = request.getParameter("id");
 		MissionService aService = new MissionService();
 		if(id != null){
-			request.setAttribute("MyMission", aService.find(Integer.parseInt(id)));
+			request.setAttribute("mission", aService.find(Integer.parseInt(id)));
 		}
 		GameService gService = new GameService();
 		request.setAttribute("games", gService.findAll());
@@ -49,7 +49,7 @@ public class MissionController extends MultiActionController {
 	{
 		MissionService aService = new MissionService();
 		int id = Integer.parseInt(request.getParameter("id"));
-		request.setAttribute("myMission", aService.find(id));
+		request.setAttribute("mission", aService.find(id));
 		return new ModelAndView("Mission/details");
 	}
 	

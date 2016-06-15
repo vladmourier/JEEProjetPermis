@@ -25,7 +25,7 @@ public class IndicatorController extends MultiActionController {
 		String id = request.getParameter("id");
 		IndicatorService aService = new IndicatorService();
 		if(id != null){
-			request.setAttribute("MyIndicator", aService.find(Integer.parseInt(id)));
+			request.setAttribute("indicator", aService.find(Integer.parseInt(id)));
 		}
 		
 		ActionService acService = new ActionService();
@@ -55,7 +55,7 @@ public class IndicatorController extends MultiActionController {
 	{
 		int id = Integer.parseInt(request.getParameter("id"));
 		IndicatorService iService = new IndicatorService();
-		request.setAttribute("Indicator", iService.find(id));
+		request.setAttribute("indicator", iService.find(id));
 		return new ModelAndView("Indicator/details");
 	}
 	

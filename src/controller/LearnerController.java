@@ -25,7 +25,7 @@ public class LearnerController extends MultiActionController {
 		String id = request.getParameter("id");
 		LearnerService aService = new LearnerService();
 		if(id != null){
-			request.setAttribute("MyLearner", aService.find(Integer.parseInt(id)));
+			request.setAttribute("learner", aService.find(Integer.parseInt(id)));
 		}
 		
 		GameService gService = new GameService();
@@ -59,7 +59,7 @@ public class LearnerController extends MultiActionController {
 	{
 		int id = Integer.parseInt(request.getParameter("id"));
 		LearnerService lService = new LearnerService();
-		request.setAttribute("Learner", lService.find(id));
+		request.setAttribute("learner", lService.find(id));
 		return new ModelAndView("Learner/details");
 	}
 	
