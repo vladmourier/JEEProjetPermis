@@ -4,7 +4,7 @@
 	<c:set var="isEdit" value="${MyGoal != null}" />
 	<div class="main-panel card">
 		<div class="main-panel-header">
-			<div class="main-panel-title">Créer un Objectif</div>
+			<div class="main-panel-title"><c:choose><c:when test="${isEdit }">Editer</c:when><c:otherwise>Créer</c:otherwise></c:choose> un Objectif</div>
 		</div>
 		<div class="main-panel-content">
 			<div class="form">

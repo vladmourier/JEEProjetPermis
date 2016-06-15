@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="../layout/beforeContent.jsp"></jsp:include>
 <div class="container">
 	<div class="main-panel card">
@@ -12,7 +13,40 @@
 				</tr>
 				<tr>
 					<td class="table-field">Libellé du jeu</td>
-					<td>${game.wording }</td>	
+					<td>${game.wording }</td>
+				</tr>
+				<tr>
+					<td class="table-field">Actions du jeu</td>
+					<td>
+						<ul>
+							<c:forEach items="${game.actions}" var="action">
+								<li><a href="detailsAction.htm?id=${action.id}">
+										${action.wording }</a></li>
+							</c:forEach>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="table-field">Apprenants inscrits</td>
+					<td>
+						<ul>
+							<c:forEach items="${game.learners}" var="learner">
+								<li><a href="detailsLearner.htm?id=${learner.id}">
+										${learner.forname} ${learner.surname }</a></li>
+							</c:forEach>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="table-field">Missions du jeu</td>
+					<td>
+						<ul>
+							<c:forEach items="${game.missions}" var="mission">
+								<li><a href="detailsMission.htm?id=${mission.id}">
+										${mission.wording }</a></li>
+							</c:forEach>
+						</ul>
+					</td>
 				</tr>
 			</table>
 		</div>

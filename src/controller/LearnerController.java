@@ -47,21 +47,21 @@ public class LearnerController extends MultiActionController {
 	@RequestMapping(value="detailsLearner.htm")
 	public ModelAndView detailsLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//int id = Integer.parseInt(request.getParameter("id"));
-		//request.setAttribute("myLearner", aService.detailsLearner(id));
+		LearnerService aService = new LearnerService();
+		int id = Integer.parseInt(request.getParameter("id"));
+		request.setAttribute("myLearner", aService.find(id));
 		return new ModelAndView("Learner/details");
 	}
 	
 	@RequestMapping(value="listLearner.htm")
 	public ModelAndView listLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//request.setAttribute("myLearners", aService.listLearners());
+		LearnerService aService = new LearnerService();
+		request.setAttribute("learners", aService.findAll());
 		return new ModelAndView("Learner/list");
 	}
 	
-	@RequestMapping(value="deleteeLearner.htm")
+	@RequestMapping(value="deleteLearner.htm")
 	public ModelAndView removeLearner(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		//Service aService = new Service();

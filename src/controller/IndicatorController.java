@@ -45,17 +45,17 @@ public class IndicatorController extends MultiActionController {
 	@RequestMapping(value="detailsIndicator.htm")
 	public ModelAndView detailsIndicator(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//int id = Integer.parseInt(request.getParameter("id"));
-		//request.setAttribute("myIndicator", aService.detailsIndicator(id));
+		IndicatorService aService = new IndicatorService();
+		int id = Integer.parseInt(request.getParameter("id"));
+		request.setAttribute("myIndicator", aService.find(id));
 		return new ModelAndView("Indicator/details");
 	}
 	
 	@RequestMapping(value="listIndicator.htm")
 	public ModelAndView listIndicator(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//request.setAttribute("myIndicators", aService.listIndicators());
+		IndicatorService aService = new IndicatorService();
+		request.setAttribute("indicators", aService.findAll());
 		return new ModelAndView("Indicator/list");
 	}
 	
