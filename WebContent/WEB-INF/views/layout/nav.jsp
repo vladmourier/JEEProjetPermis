@@ -56,7 +56,7 @@
                     </ul>
                 </li>
                 <li class="hoverable">
-                	<a href="#" class="waves-effect waves-light">
+                	<a href="dashboard.htm" class="waves-effect waves-light">
                     	<i class="fa fa-tachometer"></i> Dashboard
                     </a>
                 </li>

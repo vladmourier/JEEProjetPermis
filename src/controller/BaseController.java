@@ -39,6 +39,12 @@ public class BaseController extends MultiActionController {
 		return index(request, response);
 	}
 	
+	@RequestMapping(value="dashboard.htm")
+	public ModelAndView dashboard(HttpServletRequest request, HttpServletResponse response) throws Exception
+	{
+		return new ModelAndView("General/dashboard");
+	}
+	
 	@RequestMapping(value="register.htm")
 	public ModelAndView register(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
