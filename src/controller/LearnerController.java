@@ -59,7 +59,7 @@ public class LearnerController extends MultiActionController {
 	{
 		int id = Integer.parseInt(request.getParameter("id"));
 		LearnerService lService = new LearnerService();
-		request.setAttribute("myLearner", lService.find(id));
+		request.setAttribute("Learner", lService.find(id));
 		return new ModelAndView("Learner/details");
 	}
 	
