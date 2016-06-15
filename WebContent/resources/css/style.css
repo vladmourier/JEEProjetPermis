@@ -53,9 +53,6 @@
 	.form-field-left {
 		border-right: none !important;
 	}
-	.chosen-container {
-		width: 100% !important;
-	}
 }
 
 /***********************************************************
@@ -445,4 +442,8 @@ textarea:focus {
 
 .form-input select, .form-input input {
 	width: 100%;
+}
+
+.chosen-container {
+	width: 100% !important;
 }
