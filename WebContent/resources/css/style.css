@@ -423,3 +423,7 @@ textarea:focus {
 	min-width: 60%;
 	height: 55%;
 }
+
+.form-input select, .form-input input{
+	width: 100%;
+}

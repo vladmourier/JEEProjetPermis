@@ -51,11 +51,13 @@ public class IndicatorController extends MultiActionController {
 	}
 	
 	@RequestMapping(value="detailsIndicator.htm")
-	public ModelAndView detailsIndicator(HttpServletRequest request, HttpServletResponse response) throws Exception
+	public ModelAndView detailsIndicators(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
+		System.out.println("TEST FUCKSHIT");
 		int id = Integer.parseInt(request.getParameter("id"));
 		IndicatorService iService = new IndicatorService();
-		request.setAttribute("indicator", iService.find(id));
+		request.setAttribute("myIndicator", iService.find(id));
+		System.out.println(iService.find(id));
 		return new ModelAndView("Indicator/details");
 	}
 	

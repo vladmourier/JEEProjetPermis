@@ -59,7 +59,7 @@ public class MissionController extends MultiActionController {
 	{
 		MissionService mService = new MissionService();
 		int id = Integer.parseInt(request.getParameter("id"));
-		request.setAttribute("mission", mService.find(id));
+		request.setAttribute("myMission", mService.find(id));
 		return new ModelAndView("Mission/details");
 	}
 	

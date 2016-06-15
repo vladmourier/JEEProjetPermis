@@ -6,7 +6,7 @@
 	<c:forEach items="${missions }" var="mission">
 		<div class="card card-primary text-xs-center z-depth-2 list-item">
 			<div class="card-block main-panel-content">
-				<a class="fullSizeBlock" href="detailsMission.htm?id=">
+				<a class="fullSizeBlock" href="detailsMission.htm?id=${mission.id }">
 					<p class="white-text">${mission.wording }</p>
 				</a>
 				<p class="white-text"></p>
