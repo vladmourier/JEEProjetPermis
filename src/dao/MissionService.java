@@ -8,7 +8,7 @@ import metier.Mission;
 
 public class MissionService extends EntityService {
 	
-	public void insertGoal(Mission mission)
+	public void insertMission(Mission mission)
 	{
 		try
 		{

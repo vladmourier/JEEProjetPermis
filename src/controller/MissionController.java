@@ -11,7 +11,9 @@ import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 import dao.GameService;
 import dao.GoalService;
+import dao.IndicatorService;
 import dao.MissionService;
+import metier.Mission;
 
 @Controller
 public class MissionController extends MultiActionController {
@@ -38,32 +40,45 @@ public class MissionController extends MultiActionController {
 	@RequestMapping(value="addValidateMission.htm")
 	public ModelAndView createMission(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//TODO creation of a Mission
-		//Service aService = new Service();
-		//aService.createMission(MISSION_CREATED);
+		Mission mis = new Mission();
+		GameService gService = new GameService();
+		
+		mis.setWording(request.getParameter("wording"));
+		mis.setGame(gService.find(Integer.parseInt(request.getParameter("fk_game"))));
+
+		MissionService mService = new MissionService();
+		mService.insertMission(mis);
+		
+		listMission(request, response);
+		
 		return new ModelAndView("Mission/list");
 	}
 	
 	@RequestMapping(value="detailsMission.htm")
 	public ModelAndView detailsMission(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		MissionService aService = new MissionService();
+		MissionService mService = new MissionService();
 		int id = Integer.parseInt(request.getParameter("id"));
-		request.setAttribute("mission", aService.find(id));
+		request.setAttribute("mission", mService.find(id));
 		return new ModelAndView("Mission/details");
 	}
 	
 	@RequestMapping(value="listMission.htm")
 	public ModelAndView listMission(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		MissionService aService = new MissionService();
-		request.setAttribute("missions", aService.findAll());
+		MissionService mService = new MissionService();
+		request.setAttribute("missions", mService.findAll());
 		return new ModelAndView("Mission/list");
 	}
 	
 	@RequestMapping(value="deleteMission.htm")
 	public ModelAndView removeMission(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
+		int id = Integer.parseInt(request.getParameter("id"));
+		MissionService mService = new MissionService();
+		//Attente de l'implémentation du service associé
+		
+		
 		//Service aService = new Service();
 		//int id = Integer.parseInt(request.getParameter("id"));
 		//request.setAttribute("myMission", aService.detailsMission(id));
@@ -73,6 +88,11 @@ public class MissionController extends MultiActionController {
 	@RequestMapping(value="deleteValidateMission.htm")
 	public ModelAndView deleteMission(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
+		int id = Integer.parseInt(request.getParameter("id"));
+		MissionService mService = new MissionService();
+		//Attente de l'implémentation du service associé
+		
+		
 		//Service aService = new Service();
 		//int id = Integer.parseInt(request.getParameter("id"));
 		//aService.deleteMission(id);
