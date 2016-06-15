@@ -4,7 +4,6 @@
 	<c:set var="isEdit" value="${MyGoal != null}" />
 	<div class="main-panel card">
 		<div class="main-panel-header">
-<<<<<<< HEAD
 			<div class="main-panel-title">
 				<c:choose>
 					<c:when test="${isEdit }">Editer</c:when>
@@ -12,9 +11,6 @@
 				</c:choose>
 				un Objectif
 			</div>
-=======
-			<div class="main-panel-title">Créer un Objectif</div>
->>>>>>> refs/remotes/origin/master
 		</div>
 		<div class="main-panel-content">
 			<div class="form">
