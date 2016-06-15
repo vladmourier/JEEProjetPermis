@@ -47,17 +47,17 @@ public class MissionController extends MultiActionController {
 	@RequestMapping(value="detailsMission.htm")
 	public ModelAndView detailsMission(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//int id = Integer.parseInt(request.getParameter("id"));
-		//request.setAttribute("myMission", aService.detailsMission(id));
+		MissionService aService = new MissionService();
+		int id = Integer.parseInt(request.getParameter("id"));
+		request.setAttribute("myMission", aService.find(id));
 		return new ModelAndView("Mission/details");
 	}
 	
 	@RequestMapping(value="listMission.htm")
 	public ModelAndView listMission(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		//Service aService = new Service();
-		//request.setAttribute("myMissions", aService.listMissions());
+		MissionService aService = new MissionService();
+		request.setAttribute("missions", aService.findAll());
 		return new ModelAndView("Mission/list");
 	}
 	
