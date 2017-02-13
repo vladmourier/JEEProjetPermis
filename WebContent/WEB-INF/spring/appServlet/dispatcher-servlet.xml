@@ -5,18 +5,6 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
     	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
     	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-
-	<!-- Using default handler mapping i.e. BeanNameUrlHandlerMapping i.e. any 
-		request with URL /multiaction/*.htm will be handled by MultiControleur -->
-	<!-- InternalPathMethodNameResolver invokes a method with name same as the 
-		last part of request URL excluding the extension -->
-
-	<!--<bean name="/basecontroller/*.htm" class="controller.BaseController">
-		<property name="methodNameResolver">
-			<bean
-				class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver" />
-		</property>
-	</bean>-->
 	
 	<context:component-scan base-package="controller"/>
 
@@ -30,6 +18,8 @@
     <mvc:resources mapping="/img/**" location="/resources/img/"/>
     <mvc:resources mapping="/js/**" location="/resources/js/"/>
     <mvc:resources mapping="/lib/**" location="/resources/lib/"/>
+	
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	
 	<mvc:annotation-driven/>
-<mvc:resources mapping="/resources/**" location="/resources/" />
 </beans>

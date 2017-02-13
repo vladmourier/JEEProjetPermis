@@ -26,7 +26,7 @@ public class ActionController extends MultiActionController {
 		String id = request.getParameter("id");
 		ActionService aService = new ActionService();
 		if(id != null){
-			request.setAttribute("MyAction", aService.find(Integer.parseInt(id)));
+			request.setAttribute("action", aService.find(Integer.parseInt(id)));
 		}
 		
 		request.setAttribute("actions", aService.findAll());

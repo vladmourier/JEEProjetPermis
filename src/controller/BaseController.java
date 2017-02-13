@@ -39,35 +39,6 @@ public class BaseController extends MultiActionController {
 		return index(request, response);
 	}
 	
-	@RequestMapping(value="fuckJEE.htm")
-	public ModelAndView dashboard(HttpServletRequest request, HttpServletResponse response) throws Exception
-	{
-		return new ModelAndView("General/dashboard");
-	}
-	
-	@RequestMapping(value="register.htm")
-	public ModelAndView register(HttpServletRequest request, HttpServletResponse response) throws Exception
-	{
-		return new ModelAndView("General/register");
-	}
-	
-	@RequestMapping(value="registerValidate.htm")
-	public ModelAndView registerValidate(HttpServletRequest request, HttpServletResponse response) throws Exception
-	{
-		try {
-			Learner l = new Learner();
-			l.setEmail(request.getParameter("email"));
-			l.setForname(request.getParameter("firstname"));
-			l.setSurname(request.getParameter("lastname"));
-			
-			//LearnerService.
-			SendEmail.sendMail("Votre insription sur le site AeroSafety a été effectuée avec succès.", request.getParameter("email"));
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-		
-		return new ModelAndView("General/register");
-	}
 	
 	@RequestMapping(value="login.htm")
 	public ModelAndView login(HttpServletRequest request, HttpServletResponse response) throws Exception
